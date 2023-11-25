@@ -1,0 +1,161 @@
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url('https://p2.trrsf.com/image/fget/cf/1200/675/middle/images.terra.com/2023/06/28/harry-potter-desperta-a-magia-s12u93y8bfj8-u7ulv6dgkm75.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+.box {
+    position: relative;
+    width: 400px;
+    height: 440px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .5);
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.box.active {
+    height: 455px;
+}
+
+.box .content-form {
+    width: 100%;
+    padding: 40px;
+}
+
+.box .content-form.login {
+    transition: .17s ease;
+    transform: translateX(0);
+}
+
+.box.active .content-form.login {
+    transition: none;
+    transform: translateX(-400px);
+}
+
+.box.active .content-form.registrar {
+    transition: transform .17s ease;
+    transform: translateX(0);
+}
+
+.content-form h2 {
+    font-size: 2em;
+    color: #3f3e3e;
+    text-align: center;
+}
+
+.content-input {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border-bottom: 2px solid #F1EFEF;
+    margin: 30px 0;
+}
+
+.content-input label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 1em;
+    font-weight: 600;
+    pointer-events: none;
+    transition: .4s;
+    color: #3f3e3e;
+}
+
+.content-input input:focus~label,
+.content-input input:valid~label {
+    top: -6px;
+}
+
+.content-input input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color: #3f3e3e;
+    padding: 0 35px 0 5px;
+}
+
+.content-input .icon {
+    position: absolute;
+    right: 8px;
+    font-size: 1.4em;
+    color: #04046c;
+    line-height: 57px;
+}
+
+.lembrar {
+    font-size: .9em;
+    margin: -15px 0 15px;
+    display: flex;
+    justify-content: space-between;
+    font-weight: 600;
+}
+
+.lembrar label {
+    color: #04046c;
+}
+
+.lembrar label input {
+    accent-color: #05057e;
+    margin-right: 3px;
+}
+
+.lembrar a {
+    color: #3f3e3e;
+    text-decoration: none;
+}
+
+.lembrar a:hover {
+    text-decoration: underline;
+}
+
+.btn {
+    width: 100%;
+    height: 45px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+    background-color: #04046c;
+    color: #F1EFEF;
+}
+
+.registrar {
+    font-size: .9em;
+    color: #3f3e3e;
+    text-align: center;
+    margin: 25px 0 10px;
+}
+
+.registrar p a {
+    color: #3f3e3e;
+    text-decoration: none;
+}
+
+.registrar p a:hover {
+    text-decoration: underline;
+}
