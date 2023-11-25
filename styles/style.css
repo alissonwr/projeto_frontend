@@ -1,0 +1,164 @@
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjvDmcF2brfEssfcMFI6vvSZjliHOgjHYruMKETkznEaCURF2JFWnLIB7gJSF_C34G_c5iojjhMbvz6rzOXum4yLk2CIq0XIS35d4SqiY2mCLit1TQhN29pbsekah8QZ6se1BUbV7ScOlJG6SI6x4Ys24KnWsMeRstH8lV75DoEp-_Yl7AAyRJycl8EyXk/s7680/HarryPotter-Desperta_a_Magia.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 99;
+}
+
+.logo {
+    font-size: 2.3rem;
+    color: #fff;
+    user-select: none;
+    cursor: pointer;
+}
+
+.navigation a {
+    position: relative;
+    font-size: 1.3rem;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 40px;
+}
+
+.navigation a::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    bottom: -6px;
+    left: 0;
+    height: 2px;
+    background: #fff;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform .4s;
+}
+
+.navigation a:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.navigation .btn {
+    width: 130px;
+    height: 50px;
+    background: transparent;
+    border: 2px solid #fff;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    color: #fff;
+    font-weight: 600;
+    margin-left: 40px;
+}
+
+.navigation .btn:hover {
+    background: #fff;
+    color: #090f1d;
+}
+
+.box {
+    position: fixed;/*relative*/
+    padding: 15px;
+    max-width: 812px;
+    /* max-width: 640px; */
+    bottom: 0;
+    /* margin: 0 auto; */
+}
+
+.gallery-wrapper {
+    overflow-x: auto;
+}
+
+.gallery {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 15px;
+}
+
+.arrow-left, .arrow-right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 90px;
+    left: 0;
+    right: auto;
+    bottom: 90px;
+    width: 20px;
+    line-height: 250px;
+    background: linear-gradient(to left, transparent 0%, white 200%);
+    cursor: pointer;
+    border: none;
+    opacity: 0.5;
+    transition: all 600ms ease-in-out;
+}
+
+.arrow-left {
+    left: 0;
+    right: auto;
+    background: linear-gradient(to right, transparent 0%, white 200%);
+}
+
+.arrow-right {
+    left: auto;
+    right: 0;
+    background: linear-gradient(to right, transparent 0%, white 200%);
+}
+
+.arrow-left:hover {
+    opacity: 1;
+}
+
+.arrow-right:hover {
+    opacity: 1;
+}
+
+.item {
+    width: 250px;
+    height: 250px;
+    flex-shrink: 0;
+    opacity: 0.8;
+    transition: all 600ms ease-in-out;
+}
+
+.item:hover {
+    opacity: 1;
+}
+
+.current-item {
+    opacity: 1;
+    box-shadow: 0 0 10px gray;
+}
+/*Hide scrollbar for chrome, safari and opera*/
+.gallery-wrapper::-webkit-scrollbar {
+    display: none;
+}
+/*Hide scrollbar for ie, edge and firefox*/
+.gallery-wrapper {
+    -ms-overflow-style: none; /*ie*/
+    scrollbar-width: none; /*edge*/
+}
