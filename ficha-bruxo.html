@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="styles/ficha-bruxo.css"/>
+</head>
+<body>
+    <header>
+        <h1>CRIE SEU BRUXO</h1>
+    </header>
+    <main>
+        <form method="POST" action="http://endpoint-api/">
+            <div class="name">
+                <label for="name">Digite o nome do(a) bruxo(a)</label> 
+                <div class="name-box">
+                    <input type="text" id="name" name="name"/>
+                </div>
+                
+            </div>
+
+            <div class="year block">
+                <h3>ANO</h3>
+                <!-- <p class="year-descr">
+                    Sua bruxa ou bruxo pode ser um aluno do 1º ao 7º Ano, ou um aluno
+                    graduado como um professor ou funcionário da escola. Os jogadores
+                    devem decidir juntos se todos estão no mesmo Ano ou em Anos
+                    diferentes.
+                </p> -->
+                <label for="year">Em qual ano você está?</label>
+                <br/>
+                <select name="year" id="year">
+                    <option value="1">1º ano</option>
+                    <option value="2">2º ano</option>
+                    <option value="3">3º ano</option>
+                    <option value="4">4º ano</option>
+                    <option value="5">5º ano</option>
+                    <option value="6">6º ano</option>
+                    <option value="7">7º ano</option>
+                </select>
+                <br/>
+                <input type="radio" for="graduated"/>
+                <label name="graduated" id="graduated">Sou graduado</label>
+            </div>
+                
+            <div class="ascendency block">
+                <h3>ASCENDENCIA</h3>
+                <label for="ascendency">Qual a sua ascendência?</label>
+                <br/>
+                <select name="ascendency" id="ascendency">
+                    <option value="1">Nascido-trouxa (Comece com 1 feitiço e 3 de Experiência)</option>
+                    <option value="2">Mestiço (Comece com 2 feitiços e 2 de Experiência</option>
+                    <option value="3">Sangue puro (Comece com 3 feitiços e 1 de Experiência)</option>
+                </select>
+            </div>
+            
+    
+            <div class="appearance block">
+                <h3>APARÊNCIA</h3>
+                <div>
+                    <label for="skin">Qual é a cor da sua pele?</label>
+                    <br/>
+                    <select name="skin" id="skin">
+                        <option value="1">Escura</option>
+                        <option value="2">Sardenta</option>
+                        <option value="3">Morena</option>
+                        <option value="4">Pálida</option>
+                        <option value="5">Corada</option>
+                        <option value="6">Bronzeada</option>
+                    </select>
+                </div>
+    
+                <div>
+                    <label for="hair">Qual é a cor do seu cabelo?</label>
+                    <br/>
+                    <select name="hair" id="hair">
+                        <option value="1">Negro</option>
+                        <option value="2">Loiro</option>
+                        <option value="3">Castanho</option>
+                        <option value="4">Platinado</option>
+                        <option value="5">Colorido</option>
+                        <option value="6">Ruivo</option>
+                    </select>
+                </div>
+                
+                <div>
+                    <label for="body">Qual é o seu físico?</label>
+                    <br/>
+                    <select name="body" id="body">
+                        <option value="1">Atlético</option>
+                        <option value="2">Grande</option>
+                        <option value="3">Baixo</option>
+                        <option value="4">Corpulento</option>
+                        <option value="5">Alto</option>
+                        <option value="6">Magro</option>
+                    </select>
+                </div>
+            </div>
+    
+            <div class="wand-material block">
+                <h3>VARINHA</h3>
+                <label for="wand-material">Do que é feita sua varinha? (Ambição/Material)</label>
+                <br/>
+                <select name="wand-material" id="wand-material">
+                    <option value="1">Conquista - Bordo</option>
+                    <option value="2">Conhecimento - Nogueira</option>
+                    <option value="3">Diversão - Pinho</option>
+                    <option value="4">Amizade - Cedro</option>
+                    <option value="5">Poder - Teixo</option>
+                    <option value="6">Status - Olmo</option>
+                </select>
+            </div>
+
+            <div class="wand-aspect block">
+                <h3>ASPECTO</h3>
+                <label for="wand-aspect">Qual o aspecto de sua varinha?</label>
+                <br/>
+                <select name="wand-aspect" id="wand-aspect">
+                    <option value="1">Flexível</option>
+                    <option value="2">Longa</option>
+                    <option value="3">Ornamentada</option>
+                    <option value="4">Simples</option>
+                    <option value="5">Usada</option>
+                    <option value="6">Curta</option>
+                </select>
+            </div>
+
+            <div class="ascendency block">
+                <h3>ASCENDENCIA</h3>
+                <label for="ascendency">Qual a sua ascendência?</label>
+                <br/>
+                <select name="ascendency" id="ascendency">
+                    <option value="1">Nascido-trouxa (Comece com 1 feitiço e 3 de Experiência)</option>
+                    <option value="2">Mestiço (Comece com 2 feitiços e 2 de Experiência)</option>
+                    <option value="3">Sangue puro (Comece com 3 feitiços e 1 de Experiência)</option>
+                </select>
+            </div>
+
+            <div class="subject block">
+                <h3>MATERIA</h3>
+                <label for="subject">Qual a sua matéria favorita?</label>
+                <br/>
+                <select name="subject" id="subject">
+                    <option value="1">Feitiços</option>
+                    <option value="2">Def. contra as Artes das Trevas</option>
+                    <option value="3">Herbologia</option>
+                    <option value="4">História da Magia</option>
+                    <option value="5">Poções</option>
+                    <option value="6">Transfiguração</option>
+                </select>
+            </div>
+
+            <div class="opt-subject block">
+                <label for="opt-subject">Qual a sua matéria opcional favorita?</label>
+                <br/>
+                <select name="opt-subject" id="opt-subject">
+                    <option value="1">Aritmancia</option>
+                    <option value="2">Astronomia</option>
+                    <option value="3">Trato das Criaturas Mágicas</option>
+                    <option value="4">Adivinhação</option>
+                    <option value="5">Estudo dos Trouxas</option>
+                    <option value="6">Quadribol</option>
+                </select>
+            </div>
+
+
+            <div class="attributes block">
+                <h3>ATRIBUTOS</h3>
+                <div class="attr-container">
+                    <div class="attr">
+                        <div class="attr-box">
+                            <div>Astúcia</div>
+                            <button>rolar dados</button>
+                        </div>
+                        <div class="attr-box">
+                            <div>Intelecto</div>
+                            <button>rolar dados</button>
+                        </div>
+                        <div class="attr-box">
+                            <div>Lealdade</div>
+                            <button>rolar dados</button>
+                        </div>
+                        <div class="attr-box">
+                            <div>Magia</div>
+                            <button>rolar dados</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="familiar block">
+                <h3>FAMILIAR</h3>
+                <label for="familiar">Qual o seu familiar?</label>
+                <br/>
+                <select name="familiar" id="familiar">
+                    <option value="0">Nenhum</option>
+                    <option value="1">Coruja (Pode enviar e receber cartas)</option>
+                    <option value="2">Rato (Não pode enviar ou receber cartas)</option>                  </option>
+                    <option value="3">Gato (Não vai enviar ou receber cartas)</option>
+                </select>
+            </div>
+
+            <div class="house block">
+                <h3>CASA</h3>
+                <label for="house">Qual a sua casa?</label>
+                <br/>
+                <select name="house" id="house">
+                    <option value="1">Grifinória (+1 em Bravura)</option>
+                    <option value="2">Lufa-Lufa (+1 em Lealdade)</option>
+                    <option value="3">Ornamentada</option>
+                    <option value="4">Simples</option>
+                    <option value="5">Usada</option>
+                    <option value="6">Curta</option>
+                </select>
+            </div>
+        
+            <div class="submit-box">
+                <input class="submit-button" type="submit" value="Salvar"/>
+            </div>
+        </form>
+    </main>
+    
+</body>
+</html>
