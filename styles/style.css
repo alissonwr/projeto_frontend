@@ -17,12 +17,13 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    /*background: url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjvDmcF2brfEssfcMFI6vvSZjliHOgjHYruMKETkznEaCURF2JFWnLIB7gJSF_C34G_c5iojjhMbvz6rzOXum4yLk2CIq0XIS35d4SqiY2mCLit1TQhN29pbsekah8QZ6se1BUbV7ScOlJG6SI6x4Ys24KnWsMeRstH8lV75DoEp-_Yl7AAyRJycl8EyXk/s7680/HarryPotter-Desperta_a_Magia.jpg');*/
+    background: url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjvDmcF2brfEssfcMFI6vvSZjliHOgjHYruMKETkznEaCURF2JFWnLIB7gJSF_C34G_c5iojjhMbvz6rzOXum4yLk2CIq0XIS35d4SqiY2mCLit1TQhN29pbsekah8QZ6se1BUbV7ScOlJG6SI6x4Ys24KnWsMeRstH8lV75DoEp-_Yl7AAyRJycl8EyXk/s7680/HarryPotter-Desperta_a_Magia.jpg');*/
     background-position: center;
     background-size: cover;
 }
 
 header {
+    background-color: #090f1d;
     position: fixed;
     top: 0;
     left: 0;
@@ -84,7 +85,7 @@ header {
     font-weight: 600;
     margin-left: 40px;
 
-    font-family: 'Harry Potter', sans-serif;
+    font-family: sans-serif;
     color: #fff;
     font-weight: normal;
 }

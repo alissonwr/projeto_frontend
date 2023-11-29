@@ -32,12 +32,8 @@ movimentoAleatorio2();
 setInterval(movimentoAleatorio1, 15000);
 setInterval(movimentoAleatorio2, 15000);
 
-function mudarDisplayTextoPor(idElemento){
-    var texto = document.getElementById(idElemento);
-
-    if (texto.style.display == "none"){
-        texto.style.display = "block";
-    } else {
-        texto.style.display = "none";
-    }
+function mostrarTextoPor(idTexto) {
+    var areaDeTexto = document.getElementById("areaDeTexto");
+    var texto = document.getElementById(idTexto)
+    areaDeTexto.innerHTML = texto.innerHTML;
 }
