@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Mesa do mestre</title>
+</head>
+<body>
+    <header>
+        <a href="index.html">
+            <img src="./image/brasoesok.jpg" alt="imagem castelo" title="Voltar para página inicial">
+        </a>
+    </header>
+    <div class="container"> 
+        <div class="sidebar-left">
+            <!-- Caixa com imagem e botão-->
+            <div class="dice_box" id="dice">
+                <img id="dice_d20" src="./image/dice1.png" title="Clique na varinha para girar o dado!"> 
+                <img src="./image/wandy.png" alt="wandyDice" id="wandyButtom" title="Clique para girar o dado!">   
+                <audio id="meu-audio">
+                    <source src="./image/dice.mp3" type="audio/mpeg">
+                    Seu navegador não suportaa reprodução de áudio.
+                </audio>
+            </div>
+        </div>
+        <div class="main-content">
+            <img src="./image/table3.jpeg" alt="foto da mesa do mestre">
+        </div>
+
+        <div class="sidebar-right">
+            <img src="./image/hat.png" id="hat" alt="Chapéu do Mestre">
+            <textarea placeholder="Olá sou o chapeu seletor, te acompanharei nessa jornada. Aqui é a mesa do mestre, aguarde as instruções dele. Converse com os outros personagens e com o mestre pelo chat indicando suas ações. Não fique só, Voldemort está a procura de uma vítima!!! "></textarea>
+            <form id="message-form" class="message-form">
+                <input type="text" id="message-input" placeholder="Digite sua mensagem...">
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </div>    
+    <script src="mestreJS.js"></script>    
+</body>
+</html>
