@@ -1,26 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Modern+Antiqua&family=Poppins:wght@600&display=swap');
+
 * {
-    font-family: 'Poppins', sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    overflow: hidden;
+    font-family: 'Modern Antiqua', serif;
+    
 }
+
 
 body {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: url('https://p2.trrsf.com/image/fget/cf/1200/675/middle/images.terra.com/2023/06/28/harry-potter-desperta-a-magia-s12u93y8bfj8-u7ulv6dgkm75.jpg');
+    padding: 0 30px;
+    background: url('/projeto_frontend/image/wallpapersden.com_harry-potter-magic-awakened-hd-gaming-2022_1920x1080.jpg');
     background-position: center;
     background-size: cover;
+}
+
+nav {
+    padding: 0 30px;
+}
+
+.navbar-brand {
+    font-size: 2.0rem;
+}
+
+.navbar-nav a {
+    margin: 0 20px;
+    font-size: 1.3rem;
 }
 
 .box {
     position: relative;
     width: 400px;
     height: 440px;
-    background: transparent;
+    background: whitesmoke;
     border: 2px solid rgba(255, 255, 255, .5);
     border-radius: 20px;
     backdrop-filter: blur(20px);
