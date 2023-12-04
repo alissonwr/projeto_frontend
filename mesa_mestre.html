@@ -1,42 +1,47 @@
 <!DOCTYPE html>
-<html lang="PT">
+<html lang="pt">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./styles/styleMestre.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <title>Mesa do mestre</title>
 </head>
-<body>
+<body class="d-flex flex-column h-100"> <!-- Adiciona uma classe d-flex e flex-column para ocupar a altura total da tela -->
     <header>
-        <a href="index.html">
-            <img src="./image/brasoesok.jpg" alt="imagem castelo" title="Voltar para página inicial">
-        </a>
+        <img src="./image/brasoesok.jpg" alt="imagem castelo" title="Voltar para página inicial">
     </header>
-    <div class="container"> 
-        <div class="sidebar-left">
-            <!-- Caixa com imagem e botão-->
-            <div class="dice_box" id="dice">
-                <img id="dice_d20" src="./image/dice1.png" title="Clique na varinha para girar o dado!"> 
-                <img src="./image/wandy.png" alt="wandyDice" id="wandyButtom" title="Clique para girar o dado!">   
+    <div class="container flex-grow-1 mt-4"> <!-- Utiliza flex-grow-1 para preencher a altura total -->
+        <div class="row h-100">
+            <!-- GRID ESQUERDO -->
+            <div class="col-md-3 bg-primary h-100">
+                <img id="dice_d20" src="./image/dice1.png" class="img-fluid mb-3" alt="imagem do dado"> 
+                <img id="wandyButtom" src="./image/wandy.png" class="img-fluid" alt="img-fluid redimensionar-wandy"  title="Clique para girar o dado!">   
                 <audio id="meu-audio">
                     <source src="./image/dice.mp3" type="audio/mpeg">
-                    Seu navegador não suportaa reprodução de áudio.
+                    Seu navegador não suporta a reprodução de áudio.
                 </audio>
             </div>
-        </div>
-        <div class="main-content">
-            <img src="./image/table3.jpeg" alt="foto da mesa do mestre">
-        </div>
-
-        <div class="sidebar-right">
-            <img src="./image/hat.png" id="hat" alt="Chapéu do Mestre">
-            <textarea placeholder="Olá sou o chapeu seletor, te acompanharei nessa jornada. Aqui é a mesa do mestre, aguarde as instruções dele. Converse com os outros personagens e com o mestre pelo chat indicando suas ações. Não fique só, Voldemort está a procura de uma vítima!!! "></textarea>
-            <form id="message-form" class="message-form">
-                <input type="text" id="message-input" placeholder="Digite sua mensagem...">
-                <button type="submit">Enviar</button>
-            </form>
+            <!-- GRID CENTRO -->
+            <div class="col-md-6 bg-secondary h-100">
+                <div class="background-image"></div>
+            </div>
+            <!-- GRID RIGHT -->
+            <div class="col-md-3 bg-info h-100">
+                <img src="./image/hat.png" class="img-fluid mb-3" id="hat" alt="Chapéu do Mestre">
+                <textarea placeholder="Olá sou o chapéu seletor, te acompanharei nessa incrível jornada. Aguarde as instruções do mestre nesse chat. Cuidado, Voldemort está a procura de uma nova vítima..."></textarea>
+                <form id="message-form" class="message-form">
+                    <input type="text" id="message-input" placeholder="Digite sua mensagem...">
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
         </div>
     </div>    
-    <script src="mestreJS.js"></script>    
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="./scripts/mestreJS.js"></script>   
 </body>
 </html>
+
+
