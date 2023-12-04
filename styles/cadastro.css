@@ -13,7 +13,7 @@ body {
     align-items: center;
     min-height: 100vh;
     padding: 0 30px;
-    background: url('/projeto_frontend/image/wallpapersden.com_harry-potter-magic-awakened-hd-gaming-2022_1920x1080.jpg');
+    background: url('/image/wallpapersden.com_harry-potter-magic-awakened-hd-gaming-2022_1920x1080.jpg');
     background-position: center;
     background-size: cover;
 }

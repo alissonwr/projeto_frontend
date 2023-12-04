@@ -1,115 +1,69 @@
-body {
-  background-image: linear-gradient(0deg, #bf7a30 0%, #edd599 46%, #bf7a30 100%);
-  background-size: cover;
-  width: 100vw;
-  height: 100vh;
-  font-family: "Inknut Antiqua", serif;
-  font-weight: lighter;
+@import url('https://fonts.googleapis.com/css2?family=Modern+Antiqua&family=Poppins:wght@600&display=swap');
+
+* {
+    font-family: 'Modern Antiqua', serif;   
 }
 
-h1 {
-  font-family: "Inknut Antiqua", serif;
-  color: #f5f1c4;
-  font-size: 50px;
+/*HEADER*/
+nav {
+  padding: 0 30px;
 }
 
-h2 {
-  color: #f5f1c4;
-  font-size: 35px;
-  text-align: center;
-  font-weight: 700;
-}
-
-h3 {
-  color: #f5f1c4;
-  font-size: 30px;
-  text-align: center;
+.navbar-brand {
+  font-size: 2rem;
+  margin: 0 0 1rem;
   font-weight: 500;
 }
 
-.header {
-  overflow: hidden;
-  background-color: #0e1a40;
-  padding: 10px 10px;
-  z-index: 0;
+.navbar-nav a {
+  margin: 0 20px;
+  font-size: 1.3rem;
+}
+/*HEADER*/
+
+body {
+  margin: 0;
+  color: var(--color-text);
+  background-color: #000000;
+  background-image: url(/image/black_background_1920x1080.png);
+  background-size: cover;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-.header a {
-  float: left;
-  color: #f5f1c4;
+.content {
+  color: blanchedalmond;
+  margin-top: 15vh;
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  position: relative;
+  justify-content: flex-start;
+  align-items: center;
   text-align: center;
-  padding: 15px;
-  text-decoration: none;
-  font-size: 25px;
-  line-height: 6vh;
-  border-radius: 4px;
-  transition: all 0.45s ease-Out;
 }
 
-.header img {
-  float: left;
-}
-
-.header a:hover {
-  background-color: #f5f1c4;
-  color: #0e1a40;
-}
-
-.header_right {
-  float: right;
-}
-
-.btn_header {
-  float: right;
-  position: relative;
-  overflow: hidden;
-  cursor: pointer;
-}
-
-.btn_header a {
-  position: relative;
-  transition: all 0.45s ease-Out;
-}
-
-.logo {
-  width: 600px;
-  height: auto;
-  position: relative;
-  float: left;
-}
-
-@media only screen and (max-width: 767px) {
-  .logo {
-    content: url("/assets/images/logo_responsivo.png");
-    width: 100px;
-    height: 100px;
-    float: center;
-    align-items: center;
-  }
-}
-
-@media screen and (max-width: 700px) {
-  .header a {
-    display: grid;
-    float: center;
-    justify-content: center;
-    text-align: center;
-    margin-inline: 0 30px 0 30px;
-  }
-  .header_right {
-    float: center;
-    justify-content: center;
-  }
-}
-
-.sobre {
+.content h1 {
+  font-size: 5rem;
   text-align: center;
-  padding-left: 5vw;
-  padding-right: 5vw;
-  line-height: 1.5;
+}
+
+.content h2 {
+  margin-top: 2%;
+  font-size: 3rem;
+  text-align: center;
+}
+
+.content p {
+  margin-top: 2%;
+  font-size: 2rem;
+  line-height: 1.25;
+  text-align: center;
+  margin: 0;
 }
 
 .areaDeTexto {
+  margin-top: 10vh;
   text-align: center;
   padding-left: 5vw;
   padding-right: 5vw;
@@ -120,37 +74,39 @@ h3 {
 }
 
 .btn_display {
+  margin-top: 10vh;
   display: flex;
   justify-content: center;
 }
 
-.btn {
+.btn_body {
   float: center;
   color: #f5f1c4;
   text-align: center;
   padding: 20px;
   margin: 0 20px;
   text-decoration: none;
-  font-family: "Inknut Antiqua", serif;
   font-size: 15px;
   line-height: 3vh;
-  border-radius: 4px;
+  border-radius: 50%;
+  height: 40%;
+  width: 20%;
   border-color: transparent;
   transition: all 0.45s ease-Out;
-  background-color: #0e1a40;
+  background-color: #1d5dff;
   text-transform: uppercase;
   cursor: pointer;
   letter-spacing: 1px;
   font-weight: 700;
 }
 
-.btn:hover {
+.btn_body:hover {
   background-color: #f5f1c4;
   color: #0e1a40;
 }
 
 @media screen and (max-width: 700px) {
-  .btn {
+  .btn_body {
     display: grid;
     float: center;
     justify-content: center;
@@ -163,620 +119,272 @@ h3 {
   }
 }
 
-.pegadas1 {
-  position: absolute;
-  left: 85%;
-  top: 70%;
-  transform: rotate(-120deg);
-  opacity: 0.35;
-  height: 20px;
-  width: 500px;
+
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
 }
 
-.leftfoot1:nth-child(1) {
-  height: 20px;
-  position: absolute;
-  bottom: 10px;
-  -webkit-transform: rotateZ(180deg);
-  -moz-transform: rotateZ(180deg);
-  -ms-transform: rotateZ(180deg);
-  -o-transform: rotateZ(180deg);
-  transform: rotateZ(180deg);
-  -webkit-animation: one 15s infinite;
-  -moz-animation: one 15s infinite;
-  -ms-animation: one 15s infinite;
-  -o-animation: one 15s infinite;
-  animation: one 15s infinite;
+:root {
+  font-size: 16px;
+}
+
+.demo-2 {
+  --color-text: #a5a5a5;
+  --color-bg: #000000;
+  --color-font-circle: #7b7772;
+  --color-button: #1d5dff;
+  --color-text-button: #000000;
+  --color-text-circle-1: #BF0413;
+  --color-text-circle-2: #004586;
+  --color-text-circle-3: #D9A404;
+  --color-text-circle-4: #293929;
+  --font-weight-circle-1: 300;
+  --font-weight-circle-2: 300;
+  --font-weight-circle-3: 400;
+  --font-weight-circle-4: 300;
+}
+
+/* Page Loader */
+.js body::before,
+.js body::after {
+  content: "";
+  position: fixed;
+  z-index: 1000;
+  transition: opacity 0.3s;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.js body::before {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--color-bg);
+}
+
+.js body::after {
+  content: "Loading";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  line-height: 1;
+  color: var(--color-link);
+}
+
+.js .loading::before,
+.js .loading::after {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-link);
+  outline: none;
+}
+
+a:hover {
+  color: var(--color-link-hover);
+  outline: none;
+}
+
+/* Better focus styles from https://developer.mozilla.org/en-US/docs/Web/CSS/:focus-visible */
+a:focus {
+  /* Provide a fallback style for browsers
+	 that don't support :focus-visible */
+  outline: none;
+  background: lightgrey;
+}
+
+a:focus:not(:focus-visible) {
+  /* Remove the focus indicator on mouse-focus for browsers
+	 that do support :focus-visible */
+  background: transparent;
+}
+
+a:focus-visible {
+  /* Draw a very noticeable focus style for
+	 keyboard-focus on browsers that do support
+	 :focus-visible */
+  outline: 2px solid red;
+  background: transparent;
+}
+
+.frame {
+  padding: 3rem 5vw;
+  text-align: center;
+  position: relative;
+  font-weight: 500;
+  will-change: transform;
+}
+
+.js .frame {
   opacity: 0;
 }
 
-.right:nth-child(2) {
+.frame__links {
+  display: inline;
+}
+
+.frame__links a:not(:last-child),
+.frame__demos a:not(:last-child) {
+  margin: 0 1rem 0 0;
+}
+
+.frame__demos {
+  margin: 1rem 0;
+}
+
+.frame__demo--current,
+.frame__demo--current:hover {
+  color: var(--color-text);
+}
+
+/*BOTAO DO CIRCULO*/
+.enter {
+  display: block;
+  border: 0;
+  width: var(--dim-button);
+  height: var(--dim-button);
   position: absolute;
-  height: 20px;
-  -webkit-transform: rotateX(180deg) rotateZ(180deg);
-  -moz-transform: rotateX(180deg) rotateZ(180deg);
-  -ms-transform: rotateX(180deg) rotateZ(180deg);
-  -o-transform: rotateX(180deg) rotateZ(180deg);
-  transform: rotateX(180deg) rotateZ(180deg);
-  bottom: 30px;
-  left: 50px;
-  -webkit-animation: one 15s infinite;
-  -moz-animation: one 15s infinite;
-  -ms-animation: one 15s infinite;
-  -o-animation: one 15s infinite;
-  animation: one 15s infinite;
-  -webkit-animation-delay: 0.5s;
-  -moz-animation-delay: 0.5s;
-  -ms-animation-delay: 0.5s;
-  -o-animation-delay: 0.5s;
-  animation-delay: 0.5s;
+  left: calc(50% - var(--dim-button) / 2);
+  top: calc(50% - var(--dim-button) / 2);
+  font: inherit;
+  font-weight: 500;
+  cursor: pointer;
+  background: none;
+  color: var(--color-text-button);
+  padding: 0;
+}
+
+.enter:focus,
+.enter:hover,
+.enter:active {
+  outline: none;
+}
+
+.enter__bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: var(--color-button);
+}
+
+.enter__text {
+  position: relative;
+}
+
+.js .enter {
   opacity: 0;
 }
+/*BOTAO DO CIRCULO*/
 
-.leftfoot1:nth-child(3) {
-  height: 20px;
-  position: absolute;
-  bottom: 10px;
-  -webkit-transform: rotateZ(180deg);
-  -moz-transform: rotateZ(180deg);
-  -ms-transform: rotateZ(180deg);
-  -o-transform: rotateZ(180deg);
-  transform: rotateZ(180deg);
-  left: 100px;
-  -webkit-animation: one 15s infinite;
-  -moz-animation: one 15s infinite;
-  -ms-animation: one 15s infinite;
-  -o-animation: one 15s infinite;
-  animation: one 15s infinite;
-  -webkit-animation-delay: 1s;
-  -moz-animation-delay: 1s;
-  -ms-animation-delay: 1s;
-  -o-animation-delay: 1s;
-  animation-delay: 1s;
-  opacity: 0;
+/*css circulos inicio*/
+.circles {
+  pointer-events: none;
+  position: fixed;
+  --dim: 186vmin;
+  width: var(--dim);
+  height: var(--dim);
+  top: calc(50% - var(--dim) / 2);
+  left: calc(50% - var(--dim) / 2);
 }
 
-.right:nth-child(4) {
-  position: absolute;
-  height: 20px;
-  -webkit-transform: rotateX(180deg) rotateZ(180deg);
-  -moz-transform: rotateX(180deg) rotateZ(180deg);
-  -ms-transform: rotateX(180deg) rotateZ(180deg);
-  -o-transform: rotateX(180deg) rotateZ(180deg);
-  transform: rotateX(180deg) rotateZ(180deg);
-  bottom: 30px;
-  left: 150px;
-  -webkit-animation: one 15s infinite;
-  -moz-animation: one 15s infinite;
-  -ms-animation: one 15s infinite;
-  -o-animation: one 15s infinite;
-  animation: one 15s infinite;
-  -webkit-animation-delay: 1.5s;
-  -moz-animation-delay: 1.5s;
-  -ms-animation-delay: 1.5s;
-  -o-animation-delay: 1.5s;
-  animation-delay: 1.5s;
-  opacity: 0;
+.circles__text {
+  text-transform: uppercase;
+  transform-origin: 700px 700px;
+  will-change: transform, opacity;
 }
 
-.leftfoot1:nth-child(5) {
-  height: 20px;
-  position: absolute;
-  bottom: 10px;
-  -webkit-transform: rotateZ(180deg);
-  -moz-transform: rotateZ(180deg);
-  -ms-transform: rotateZ(180deg);
-  -o-transform: rotateZ(180deg);
-  transform: rotateZ(180deg);
-  left: 200px;
-  -webkit-animation: one 15s infinite;
-  -moz-animation: one 15s infinite;
-  -ms-animation: one 15s infinite;
-  -o-animation: one 15s infinite;
-  animation: one 15s infinite;
-  -webkit-animation-delay: 2s;
-  -moz-animation-delay: 2s;
-  -ms-animation-delay: 2s;
-  -o-animation-delay: 2s;
-  animation-delay: 2s;
-  opacity: 0;
+.circles__text--1 {
+  font-size: 25vmin;
+  font-size: clamp(170px, 25vmin, 180px);
+  font-family: var(--font-circle-1);
+  font-weight: var(--font-weight-circle-1);
+  fill: var(--color-text-circle-1);
 }
 
-.right:nth-child(6) {
-  position: absolute;
-  height: 20px;
-  -webkit-transform: rotateX(180deg) rotateZ(180deg);
-  -moz-transform: rotateX(180deg) rotateZ(180deg);
-  -ms-transform: rotateX(180deg) rotateZ(180deg);
-  -o-transform: rotateX(180deg) rotateZ(180deg);
-  transform: rotateX(180deg) rotateZ(180deg);
-  bottom: 30px;
-  left: 250px;
-  -webkit-animation: one 15s infinite;
-  -moz-animation: one 15s infinite;
-  -ms-animation: one 15s infinite;
-  -o-animation: one 15s infinite;
-  animation: one 15s infinite;
-  -webkit-animation-delay: 2.5s;
-  -moz-animation-delay: 2.5s;
-  -ms-animation-delay: 2.5s;
-  -o-animation-delay: 2.5s;
-  animation-delay: 2.5s;
-  opacity: 0;
+.circles__text--2 {
+  font-size: 17vmin;
+  font-size: clamp(136px, 17vmin, 153px);
+  font-family: var(--font-circle-2);
+  font-weight: var(--font-weight-circle-2);
+  fill: var(--color-text-circle-2);
 }
 
-.leftfoot1:nth-child(7) {
-  height: 20px;
-  position: absolute;
-  bottom: 10px;
-  -webkit-transform: rotateZ(180deg);
-  -moz-transform: rotateZ(180deg);
-  -ms-transform: rotateZ(180deg);
-  -o-transform: rotateZ(180deg);
-  transform: rotateZ(180deg);
-  left: 300px;
-  -webkit-animation: one 15s infinite;
-  -moz-animation: one 15s infinite;
-  -ms-animation: one 15s infinite;
-  -o-animation: one 15s infinite;
-  animation: one 15s infinite;
-  -webkit-animation-delay: 3s;
-  -moz-animation-delay: 3s;
-  -ms-animation-delay: 3s;
-  -o-animation-delay: 3s;
-  animation-delay: 3s;
-  opacity: 0;
+.circles__text--3 {
+  font-size: 13.5vmin;
+  font-size: clamp(110px, 13.5vmin, 120px);
+  font-family: var(--font-circle-3);
+  font-weight: var(--font-weight-circle-3);
+  fill: var(--color-text-circle-3);
 }
 
-.right:nth-child(8) {
-  position: absolute;
-  height: 20px;
-  -webkit-transform: rotateX(180deg) rotateZ(180deg);
-  -moz-transform: rotateX(180deg) rotateZ(180deg);
-  -ms-transform: rotateX(180deg) rotateZ(180deg);
-  -o-transform: rotateX(180deg) rotateZ(180deg);
-  transform: rotateX(180deg) rotateZ(180deg);
-  bottom: 30px;
-  left: 350px;
-  -webkit-animation: one 15s infinite;
-  -moz-animation: one 15s infinite;
-  -ms-animation: one 15s infinite;
-  -o-animation: one 15s infinite;
-  animation: one 15s infinite;
-  -webkit-animation-delay: 3.5s;
-  -moz-animation-delay: 3.5s;
-  -ms-animation-delay: 3.5s;
-  -o-animation-delay: 3.5s;
-  animation-delay: 3.5s;
-  opacity: 0;
-}
-.leftfoot1:nth-child(9) {
-  height: 20px;
-  position: absolute;
-  bottom: 10px;
-  -webkit-transform: rotateZ(180deg);
-  -moz-transform: rotateZ(180deg);
-  -ms-transform: rotateZ(180deg);
-  -o-transform: rotateZ(180deg);
-  transform: rotateZ(180deg);
-  left: 300px;
-  -webkit-animation: one 15s infinite;
-  -moz-animation: one 15s infinite;
-  -ms-animation: one 15s infinite;
-  -o-animation: one 15s infinite;
-  animation: one 15s infinite;
-  -webkit-animation-delay: 4s;
-  -moz-animation-delay: 4s;
-  -ms-animation-delay: 4s;
-  -o-animation-delay: 4s;
-  animation-delay: 4s;
-  opacity: 0;
+.circles__text--4 {
+  font-size: 9.5vmin;
+  font-size: clamp(85px, 9.5vmin, 94px);
+  font-family: var(--font-circle-4);
+  font-weight: var(--font-weight-circle-4);
+  fill: var(--color-text-circle-4);
 }
 
-.right:nth-child(10) {
-  position: absolute;
-  height: 20px;
-  -webkit-transform: rotateX(180deg) rotateZ(180deg);
-  -moz-transform: rotateX(180deg) rotateZ(180deg);
-  -ms-transform: rotateX(180deg) rotateZ(180deg);
-  -o-transform: rotateX(180deg) rotateZ(180deg);
-  transform: rotateX(180deg) rotateZ(180deg);
-  bottom: 30px;
-  left: 350px;
-  -webkit-animation: one 15s infinite;
-  -moz-animation: one 15s infinite;
-  -ms-animation: one 15s infinite;
-  -o-animation: one 15s infinite;
-  animation: one 15s infinite;
-  -webkit-animation-delay: 4.5s;
-  -moz-animation-delay: 4.5s;
-  -ms-animation-delay: 4.5s;
-  -o-animation-delay: 4.5s;
-  animation-delay: 4.5s;
-  opacity: 0;
-}
-
-@-webkit-keyframes one {
-  0% {
-    opacity: 0;
+@media screen and (min-width: 53em) {
+  .frame {
+    position: fixed;
+    text-align: left;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    display: grid;
+    align-content: space-between;
+    width: 100%;
+    max-width: none;
+    height: 100vh;
+    padding: 2rem;
+    pointer-events: none;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+      "title links"
+      "... ..."
+      "... demos";
   }
-  50% {
-    opacity: 1;
+  .frame__title {
+    margin: 0;
+    grid-area: title;
   }
-  65% {
-    opacity: 0;
+  .frame__menu {
+    grid-area: menu;
+    justify-self: end;
   }
-  100% {
-    opacity: 0;
+  .frame__links {
+    grid-area: links;
+    padding: 0;
+    justify-self: end;
   }
-}
-
-@-moz-keyframes one {
-  0% {
-    opacity: 0;
+  .frame__demos {
+    margin: 0;
+    grid-area: demos;
+    justify-self: end;
   }
-  50% {
-    opacity: 1;
+  .frame a {
+    pointer-events: auto;
   }
-  65% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
-@-ms-keyframes one {
-  0% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-  }
-  65% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
-@-o-keyframes one {
-  0% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-  }
-  65% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
-@-keyframes one {
-  0% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-  }
-  65% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
-/* a partir daqui: animação das pegadas 2*/
-
-.pegadas2 {
-  position: absolute;
-  left: 15%;
-  top: 40%;
-  transform: rotate(-45deg);
-  opacity: 0.35;
-  height: 20px;
-  width: 500px;
-}
-
-.leftfoot2:nth-child(1) {
-  height: 20px;
-  position: absolute;
-  bottom: 10px;
-  -webkit-transform: rotateZ(180deg);
-  -moz-transform: rotateZ(180deg);
-  -ms-transform: rotateZ(180deg);
-  -o-transform: rotateZ(180deg);
-  transform: rotateZ(180deg);
-  -webkit-animation: one 12s infinite;
-  -moz-animation: one 12s infinite;
-  -ms-animation: one 12s infinite;
-  -o-animation: one 12s infinite;
-  animation: one 12s infinite;
-  opacity: 0;
-}
-
-.right2:nth-child(2) {
-  position: absolute;
-  height: 20px;
-  -webkit-transform: rotateX(180deg) rotateZ(180deg);
-  -moz-transform: rotateX(180deg) rotateZ(180deg);
-  -ms-transform: rotateX(180deg) rotateZ(180deg);
-  -o-transform: rotateX(180deg) rotateZ(180deg);
-  transform: rotateX(180deg) rotateZ(180deg);
-  bottom: 30px;
-  left: 50px;
-  -webkit-animation: one 12s infinite;
-  -moz-animation: one 12s infinite;
-  -ms-animation: one 12s infinite;
-  -o-animation: one 12s infinite;
-  animation: one 12s infinite;
-  -webkit-animation-delay: 0.5s;
-  -moz-animation-delay: 0.5s;
-  -ms-animation-delay: 0.5s;
-  -o-animation-delay: 0.5s;
-  animation-delay: 0.5s;
-  opacity: 0;
-}
-
-.leftfoot2:nth-child(3) {
-  height: 20px;
-  position: absolute;
-  bottom: 10px;
-  -webkit-transform: rotateZ(180deg);
-  -moz-transform: rotateZ(180deg);
-  -ms-transform: rotateZ(180deg);
-  -o-transform: rotateZ(180deg);
-  transform: rotateZ(180deg);
-  left: 100px;
-  -webkit-animation: one 12s infinite;
-  -moz-animation: one 12s infinite;
-  -ms-animation: one 12s infinite;
-  -o-animation: one 12s infinite;
-  animation: one 12s infinite;
-  -webkit-animation-delay: 1s;
-  -moz-animation-delay: 1s;
-  -ms-animation-delay: 1s;
-  -o-animation-delay: 1s;
-  animation-delay: 1s;
-  opacity: 0;
-}
-
-.right2:nth-child(4) {
-  position: absolute;
-  height: 20px;
-  -webkit-transform: rotateX(180deg) rotateZ(180deg);
-  -moz-transform: rotateX(180deg) rotateZ(180deg);
-  -ms-transform: rotateX(180deg) rotateZ(180deg);
-  -o-transform: rotateX(180deg) rotateZ(180deg);
-  transform: rotateX(180deg) rotateZ(180deg);
-  bottom: 30px;
-  left: 150px;
-  -webkit-animation: one 12s infinite;
-  -moz-animation: one 12s infinite;
-  -ms-animation: one 12s infinite;
-  -o-animation: one 12s infinite;
-  animation: one 12s infinite;
-  -webkit-animation-delay: 1.5s;
-  -moz-animation-delay: 1.5s;
-  -ms-animation-delay: 1.5s;
-  -o-animation-delay: 1.5s;
-  animation-delay: 1.5s;
-  opacity: 0;
-}
-
-.leftfoot2:nth-child(5) {
-  height: 20px;
-  position: absolute;
-  bottom: 10px;
-  -webkit-transform: rotateZ(180deg);
-  -moz-transform: rotateZ(180deg);
-  -ms-transform: rotateZ(180deg);
-  -o-transform: rotateZ(180deg);
-  transform: rotateZ(180deg);
-  left: 200px;
-  -webkit-animation: one 12s infinite;
-  -moz-animation: one 12s infinite;
-  -ms-animation: one 12s infinite;
-  -o-animation: one 12s infinite;
-  animation: one 12s infinite;
-  -webkit-animation-delay: 2s;
-  -moz-animation-delay: 2s;
-  -ms-animation-delay: 2s;
-  -o-animation-delay: 2s;
-  animation-delay: 2s;
-  opacity: 0;
-}
-
-.right2:nth-child(6) {
-  position: absolute;
-  height: 20px;
-  -webkit-transform: rotateX(180deg) rotateZ(180deg);
-  -moz-transform: rotateX(180deg) rotateZ(180deg);
-  -ms-transform: rotateX(180deg) rotateZ(180deg);
-  -o-transform: rotateX(180deg) rotateZ(180deg);
-  transform: rotateX(180deg) rotateZ(180deg);
-  bottom: 30px;
-  left: 250px;
-  -webkit-animation: one 12s infinite;
-  -moz-animation: one 12s infinite;
-  -ms-animation: one 12s infinite;
-  -o-animation: one 12s infinite;
-  animation: one 12s infinite;
-  -webkit-animation-delay: 2.5s;
-  -moz-animation-delay: 2.5s;
-  -ms-animation-delay: 2.5s;
-  -o-animation-delay: 2.5s;
-  animation-delay: 2.5s;
-  opacity: 0;
-}
-
-.leftfoot2:nth-child(7) {
-  height: 20px;
-  position: absolute;
-  bottom: 10px;
-  -webkit-transform: rotateZ(180deg);
-  -moz-transform: rotateZ(180deg);
-  -ms-transform: rotateZ(180deg);
-  -o-transform: rotateZ(180deg);
-  transform: rotateZ(180deg);
-  left: 300px;
-  -webkit-animation: one 12s infinite;
-  -moz-animation: one 12s infinite;
-  -ms-animation: one 12s infinite;
-  -o-animation: one 12s infinite;
-  animation: one 12s infinite;
-  -webkit-animation-delay: 3s;
-  -moz-animation-delay: 3s;
-  -ms-animation-delay: 3s;
-  -o-animation-delay: 3s;
-  animation-delay: 3s;
-  opacity: 0;
-}
-
-.right2:nth-child(8) {
-  position: absolute;
-  height: 20px;
-  -webkit-transform: rotateX(180deg) rotateZ(180deg);
-  -moz-transform: rotateX(180deg) rotateZ(180deg);
-  -ms-transform: rotateX(180deg) rotateZ(180deg);
-  -o-transform: rotateX(180deg) rotateZ(180deg);
-  transform: rotateX(180deg) rotateZ(180deg);
-  bottom: 30px;
-  left: 350px;
-  -webkit-animation: one 12s infinite;
-  -moz-animation: one 12s infinite;
-  -ms-animation: one 12s infinite;
-  -o-animation: one 12s infinite;
-  animation: one 12s infinite;
-  -webkit-animation-delay: 3.5s;
-  -moz-animation-delay: 3.5s;
-  -ms-animation-delay: 3.5s;
-  -o-animation-delay: 3.5s;
-  animation-delay: 3.5s;
-  opacity: 0;
-}
-.leftfoot2:nth-child(9) {
-  height: 20px;
-  position: absolute;
-  bottom: 10px;
-  -webkit-transform: rotateZ(180deg);
-  -moz-transform: rotateZ(180deg);
-  -ms-transform: rotateZ(180deg);
-  -o-transform: rotateZ(180deg);
-  transform: rotateZ(180deg);
-  left: 300px;
-  -webkit-animation: one 12s infinite;
-  -moz-animation: one 12s infinite;
-  -ms-animation: one 12s infinite;
-  -o-animation: one 12s infinite;
-  animation: one 12s infinite;
-  -webkit-animation-delay: 4s;
-  -moz-animation-delay: 4s;
-  -ms-animation-delay: 4s;
-  -o-animation-delay: 4s;
-  animation-delay: 4s;
-  opacity: 0;
-}
-
-.right2:nth-child(10) {
-  position: absolute;
-  height: 20px;
-  -webkit-transform: rotateX(180deg) rotateZ(180deg);
-  -moz-transform: rotateX(180deg) rotateZ(180deg);
-  -ms-transform: rotateX(180deg) rotateZ(180deg);
-  -o-transform: rotateX(180deg) rotateZ(180deg);
-  transform: rotateX(180deg) rotateZ(180deg);
-  bottom: 30px;
-  left: 350px;
-  -webkit-animation: one 12s infinite;
-  -moz-animation: one 12s infinite;
-  -ms-animation: one 12s infinite;
-  -o-animation: one 12s infinite;
-  animation: one 12s infinite;
-  -webkit-animation-delay: 4.5s;
-  -moz-animation-delay: 4.5s;
-  -ms-animation-delay: 4.5s;
-  -o-animation-delay: 4.5s;
-  animation-delay: 4.5s;
-  opacity: 0;
-}
-
-@-webkit-keyframes one {
-  0% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-  }
-  65% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
-@-moz-keyframes one {
-  0% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-  }
-  65% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
-@-ms-keyframes one {
-  0% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-  }
-  65% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
-@-o-keyframes one {
-  0% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-  }
-  65% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
-@-keyframes one {
-  0% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-  }
-  65% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 0;
+  .content {
+    height: 100vh;
+    justify-content: center;
+    text-align: left;
   }
 }
