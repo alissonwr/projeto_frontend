@@ -1,0 +1,130 @@
+* {
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+    font-family: 'Poppins', sans-serif;
+    color: #bebebe;
+}
+
+body {
+    background-color: #0e1a40;
+}
+
+header {
+    margin-top: 50px;
+    font-size: 1.5em;
+    text-align: center;
+
+}
+
+header h1 {
+    color: #d3a625
+}
+
+main {
+    padding: 30px;
+    padding-bottom: 50px;
+    margin: 50px;
+    border: 1px solid #f0e75e;
+    border-radius: 20px;
+}
+
+.block {
+    width: 100%;
+    margin-top:20px;
+    text-align: center;
+    clear: both;
+}
+
+h3 {
+    color: #d3a625;
+}
+
+.name{
+    text-align: center;
+    margin: 30px;
+}
+
+.name-box {
+    display: flex;
+    justify-content: center;
+}
+
+.name label {
+    margin-bottom: 10px;
+    font-size: 1.2em;
+    color: #d3a625;
+}
+
+.name input {
+    display: block;
+    width: 550px;
+    height: 30px;
+    background-color: #222f5b;
+    border: 1px solid #f0e75e;
+    border-radius: 3px;
+    text-align: center;
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+
+.year-descr {
+    color: #2a623d;
+    text-align: justify;
+}
+
+select {
+    height: 30px;
+    margin: 5px;
+    background-color: #222f5b;
+    border: 1px solid #f0e75e;
+    border-radius: 3px;
+    min-width: 400px;
+    text-align: center;
+}
+
+option {
+    background: none;
+    height: 20px;
+}
+
+button, .submit-button{
+    height: 30px;
+    background: none;
+    border: 1px solid #f0e75e;
+    border-radius: 3px;
+    padding: 0px 5px 0px 5px;
+    margin: 2px;
+    background-color: #222f5b;
+}
+
+.submit-button {
+    margin-top: 50px;
+    margin-left: 30px;
+    width: 30%;
+}
+
+.submit-box {
+    text-align: center;
+}
+
+
+.attributes {
+    width: 100%;
+}
+
+.attr-container {
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.attr {
+    width: 40%;
+}
+
+
+.attr-box {
+    width: 25%;
+    float: left;
+}

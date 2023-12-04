@@ -1,0 +1,841 @@
+<<<<<<< HEAD
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@400;800&family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles/sobre_rpg.css" />
+    <title>Hogwarts RPG</title>
+    <link
+      rel="icon"
+      href="/assets/images/logo_fav_icon.png"
+      type="image/x-icon"
+    />
+  </head>
+
+  <body>
+    <div class="header">
+      <img
+        src="/assets/images/hogwarts-roleplaying-game-high-resolution-logo-transparent.png"
+        class="logo"
+      />
+
+      <div class="header_right">
+        <a href="/index.html">Início</a>
+        <a href="/sobre_rpg.html">Sobre</a>
+        <a href="#personagens">Personagens</a>
+        <div class="btn_header" id="btn_header">
+          <div id="circle"></div>
+          <a href="#">Iniciar Sessão</a>
+        </div>
+      </div>
+    </div>
+    <div class="sobre">
+      <h1>HOGWARTS - ROLE PLAYING GAME</h1>
+      <h2>SOBRE O JOGO</h2>
+      <h3>
+        Hogwarts - RPG é um jogo interativo de mundo aberto, onde o céu é o
+        limite, ou não... Junte a galera e venha se divertir e soltar sua
+        imaginação no mundo de magias e aventuras fantasiosas!
+      </h3>
+    </div>
+
+    <div class="como_jogar">
+      <div class="btn_display">
+        <button
+          class="btn"
+          id="btn_instrucoes"
+          onclick="mostrarTextoPor('inInstrucoes')"
+        >
+          Como Jogar
+        </button>
+        <button
+          class="btn"
+          id="btn_regras"
+          onclick="mostrarTextoPor('inRegrasBasicas')"
+        >
+          Regras Básicas
+        </button>
+        <button
+          class="btn"
+          id="btn_criacao"
+          onclick="mostrarTextoPor('inCriacao')"
+        >
+          Criação de Personagens
+        </button>
+        <button
+          class="btn"
+          id="btn_perguntas"
+          onclick="mostrarTextoPor('inPerguntas')"
+        >
+          Perguntas Frequentes
+        </button>
+      </div>
+
+      <div class="areaDeTexto" id="areaDeTexto"></div>
+
+      <div
+        class="textoApareceAposClicarBotao"
+        id="inInstrucoes"
+        style="display: none"
+      >
+        <h2>COMO JOGAR</h2>
+        Você vai precisar de... <br />
+        <br />
+        Você mesmo e de 2-5 outros jogadores <br />
+        Pelo menos dois dados de seis lados <br />
+        Uma cópia da Ficha de Personagem para cada jogador <br />
+        Uma cópia de cada ficha de "NARRADOR" para você <br />
+        Uma cópia de cada ficha de "GRUPO" para todo o grupo <br />
+        Lápis, um para cada jogador <br />
+        Papel e/ou cadernos extras <br />
+        Post-Its (opcional)
+      </div>
+
+      <div
+        class="textoApareceAposClicarBotao"
+        id="inRegrasBasicas"
+        style="display: none"
+      >
+        <h2>REGRAS BÁSICAS</h2>
+        <h3>MOVIMENTOS</h3>
+        Sempre que um jogador quiser fazer alguma coisa - como conjurar um
+        feitiço, impressionar um professor ou enfrentar um monstro - ele fará um
+        movimento. Movimentos são todas as diferentes ações que o jogador pode
+        realizar na história. Movimentos dos jogadores geralmente dizem: "Quando
+        isso acontece, então essa outra coisa acontece". <br />
+        Os jogadores tem três tipos de movimentos. Movimentos Básicos acontecem
+        quando os jogadores jogam pra ver o que acontece. Movimentos Mágicos
+        acontecem quando os jogadores conjuram feitiços. Outro tipo de movimento
+        ocorre quando você Jogar Quadribol. O Narrador tem movimentos também,
+        mas eles funcionam um pouco diferente. <br />
+        Se algo na história solicitar um movimento, o jogador deve realizar
+        aquele movimento. Quando alguém realizar um movimento, o resultado deve
+        fazer parte da história. <br />
+        Você pode pedir o uso de um movimento, mas todos devem prestar atenção
+        ao momento que eles acontecem. <br />
+        Lembre-se, movimentos só acontecem quando algo acontece na história. Se
+        alguém disser "Eu quero Desafiar o perigo", você deve dizer: "ótimo,
+        como você faz isso"? <br />
+        Se quiser, você pode dar uma olhada rápida nos Movimentos Básicos e
+        Movimentos Mágicos com os jogadores.
+        <br />
+
+        <h3>ATRIBUTOS</h3>
+        Cada bruxo ou bruxa tem cinco atributos que os descrevem. Eles são
+        positivos em seus pontos fortes e negativos nos fracos. Os cinco
+        atributos são Bravura, Astúcia, Intelecto, Lealdade e Magia. Bravura
+        descreve a coragem, integridade, honestidade e fibra do bruxo. <br />
+        <br />
+        • Astúcia descreve a habilidade do bruxo em fingir esconder, enganar ou
+        manipular. <br />
+        • Intelecto descreve a vontade, conhecimento, memória e habilidade do
+        bruxo de obter informações. <br />
+        • Lealdade descreve a gentileza e dedicação de um bruxo à seus amigos e
+        colegas de classe.<br />
+        • Magia descreve a habilidade do bruxo em conjurar feitiços, preparar
+        poções ou utilizar objetos mágicos. Quando um movimento disser para um
+        jogador rolar, ele quase sempre vai pedir que ele some um atributo ao
+        resultado.
+        <br />
+
+        <h3>CONDIÇÕES</h3>
+        Algumas vezes, um bruxo ficará assustado ao enfrentar um monstro,
+        estressado de tanto trabalho escolar, ou invejoso da paixão de um amigo.
+        Eles podem quebrar um braço depois de cair de uma vassoura ou vomitar
+        lesmas depois de serem atingidos por uma maldição. Esses status
+        negativos são chamados de Condições. Condições podem ser emocionais ou
+        físicas. Quando alguém falha numa rolagem, eles podem sofrer uma
+        Condição como consequência. As oito Condições possíveis são Assustado,
+        Furioso, Estressado, Invejoso, Envergonhado, Ferido, Azarado e
+        Inconsciente. <br />
+        Condições Emocionais como Assustado, Furioso, Estressado, Invejoso e
+        Envergonhado somem quando o bruxo ou bruxa lida com seus sentimentos
+        negativos. Elas também podem ser tratadas se outro bruxo ou bruxa
+        conforta ou o apoia, ou mudada para outra Condição caso ele passe um
+        tempo com seu Familiar. Condições físicas como Ferido, Azarado e
+        Inconsciente devem ser curadas através de medicina ou magia.
+        <br />
+
+        <h3>SORTE</h3>
+        Cada bruxo tem uma pequena reserva de Sorte que eles podem usar numa
+        necessidade. Quando um jogador quiser fazer alguma coisa que ele
+        normalmente não poderia, como conjurar um feitiço que ele não conhece ou
+        realizar uma captura impossível no Quadribol, ele pode gastar um ponto
+        de Sorte para fazê-lo. Cada Bruxo tem 3 pontos de Sorte.
+        <br />
+
+        <h3>OBJETIVOS</h3>
+        Finalmente, todos tem objetivos em comum. Aqui vai uma lista de três
+        objetivos que todos vocês tentarão cumprir quando estiverem jogando. Os
+        objetivos do seus grupo são: <br />
+        <br />
+        1- Há muitas histórias a serem contadas sobre o imenso mundo mágico.
+        Contudo, essa aqui é sobre jovens bruxos e bruxas na escola. É seu
+        trabalho contar essa história e lhe dar vida. <br />
+        2- O tempo de um jovem bruxo na escola é mais do que assistir aulas e
+        fazer provas. Há maravilhas a experimentar, perguntas a responder e
+        ameaças a enfrentar. <br />
+        3- Esse jogo é sobre surpresa e colaboração. Vocês construirão a
+        história juntos, cena a cena e sessão a sessão; Tudo certo em planejar
+        coisas que você quer que aconteça. Mas no final, o resultado depende dos
+        protagonistas e dos dados.
+        <br />
+      </div>
+    </div>
+
+    <div
+      class="textoApareceAposClicarBotao"
+      id="inCriacao"
+      style="display: none"
+    >
+      <h2>CRIE OS PERSONAGENS</h2>
+
+      Agora é a hora de criar os protagonistas! Os jogadores devem preencher o
+      formulário na seção "CRIE SEU BRUXO". <br />
+      Em HOGWARTS - ROLE PLAYING GAME você poderá personalizar e estilizar a
+      aparência de seu personagem, escolher sua varinha, ambição, se será
+      nascido bruxo ou trouxa, matéria favorita da escola de magia e até o seu
+      animal místico familiar. <br />
+      Lembre-se: O narrador deve estar preparado para responder quaisquer
+      dúvidas que os jogadores possam ter.
+    </div>
+
+    <div
+      class="textoApareceAposClicarBotao"
+      id="inPerguntas"
+      style="display: none"
+    >
+      <h2>PERGUNTAS FREQUENTES</h2>
+
+      <h3>E SE...</h3>
+
+      <h4>1 - Alguém está falando muito ou está falando pouco?</h4>
+
+      Geralmente, você consegue consertar isso fazendo perguntas aos jogadores
+      calados. Perguntas do tipo "Como você se sente sobre isto?" ou "O que você
+      quer fazer agora?" são sempre boas. Certifique-se de usar o nome do bruxo!
+      <br />
+      Tenha em mente que, às vezes, jogadores calados ficam felizes em se sentar
+      e assistir à história. Não os force a participar, apenas ofereça a chance
+      de fazê-lo.<br />
+      Se for você que estiver falando demais, faça mais perguntas a todos. Você
+      pode perguntar coisas como "Qual a aparência dessa sala?" ou "O que o
+      fantasma fará agora?” O seu trabalho é descrever o mundo, mas não faz mal
+      compartilhar isso com os jogadores de vez em quando.
+
+      <h4>2 - Todos estão olhando pra mim, mas não sei o que dizer?</h4>
+
+      Não entre em pânico! Agora é um bom momento para fazer um Movimento do
+      Narrador. Introduza algo novo na história, como um novo aluno ou uma sala
+      desconhecida. Faça acontecer algo inesperado. Ou, faça uma pergunta. Então
+      veja como os protagonistas reagem. <br />
+      Se a história realmente te pegar de surpresa, não faz mal dizer, "eu
+      realmente não tenho certeza do que acontece a seguir!” Você pode então
+      fazer uma pequena pausa para descobrir. <br />
+      Você também pode perguntar aos jogadores o que eles acham que deve
+      acontecer. Lembre-se, essa é uma história colaborativa!
+
+      <h4>3 - Não tivermos resolvido todos os Mistérios?</h4>
+
+      Você pode terminar sua história sem responder todas as perguntas dos
+      Mistérios. Se os jogadores parecerem felizes com o modo como a história
+      acabou, não precisa se preocupar com as perguntas sem resposta.<br />
+      No entanto, se eles apontarem que vários Mistérios ainda não foram
+      resolvidos, sua história pode não ter acabado ainda! Talvez você queira
+      jogar mais um pouco. Ou, se estiver sem tempo no momento, você pode marcar
+      outra sessão da história.<br />
+      Caso não possa fazer qualquer um dos dois, você pode perguntar aos
+      jogadores, "quais vocês acham que são as respostas para essas perguntas"?
+      Então tente falar rapidamente sobre algumas soluções para os Mistérios não
+      resolvidos.
+
+      <h4>4 - Não soubermos o que certo feitiço faz?</h4>
+
+      A seção de "FEITIÇOS" só inclui os nomes dos feitiços e encantamentos.
+      Isto é proposital. Quando alguém lança um feitiço, eles podem descrever o
+      seu efeito. Desde que esse efeito se encaixe no nome do feitiço e pareça
+      justo para todos, vá em frente. <br />
+      A seção de "FEITIÇOS" tem algumas sugestões sobre como alguns tipos de
+      feitiços podem causar ou prevenir Condições. No entanto, a maioria dos
+      feitiços faz algo apenas na história, como fazer as coisas levitarem ou
+      causar soluços em alguém. <br />
+      Lembre-se, para lançar um feitiço, um bruxo deve dizer corretamente o
+      encantamento e agitar sua varinha!
+
+      <h4>5 - O meu grupo não quiser usar todas as regras?</h4>
+
+      Não há problema! Você pode usar tantas regras quanto quiser. Se o seu
+      grupo quiser jogar um jogo sem Condições, não dê nenhuma Condição à
+      ninguém. Se não quiser escrever e riscar Mistérios, não pergunte sobre
+      Mistérios. Fique à vontade!
+
+      <h4>
+        6 - Eu não souber nada sobre Harry Potter, ou alguém souber mais do que
+        eu?
+      </h4>
+
+      Tudo bem. Essa é a história do seu grupo, e de mais ninguém. Não tem
+      problema adaptar as coisas para caber em sua história. Você não precisa
+      seguir os livros e filmes à perfeição. <br />
+      Se alguém lhe corrigir em algo sobre o mundo, use isso, mas só se fizer
+      sentido para sua história! Se alguém está atrapalhando a história
+      corrigindo as pessoas o tempo todo, lembre-o gentilmente de que vocês
+      estão criando uma história original. Até os filmes mudaram ou omitiram
+      coisas dos livros, e eles ainda são ótimos!<br />
+      Se você realmente precisa saber alguma coisa, você sempre pode dar uma
+      pausa na história por alguns segundos e procurar online!
+    </div>
+
+    <div class="pegadas1" id="pegadas1">
+      <img
+        class="leftfoot1"
+        src="http://www.clipartbest.com/cliparts/nTB/pK7/nTBpK7GTA.svg"
+        alt="footprint"
+      />
+
+      <img
+        class="right"
+        src="http://www.clipartbest.com/cliparts/nTB/pK7/nTBpK7GTA.svg"
+        alt="footprint"
+      />
+
+      <img
+        class="leftfoot1"
+        src="http://www.clipartbest.com/cliparts/nTB/pK7/nTBpK7GTA.svg"
+        alt="footprint"
+      />
+
+      <img
+        class="right"
+        src="http://www.clipartbest.com/cliparts/nTB/pK7/nTBpK7GTA.svg"
+        alt="footprint"
+      />
+
+      <img
+        class="leftfoot1"
+        src="http://www.clipartbest.com/cliparts/nTB/pK7/nTBpK7GTA.svg"
+        alt="footprint"
+      />
+
+      <img
+        class="right"
+        src="http://www.clipartbest.com/cliparts/nTB/pK7/nTBpK7GTA.svg"
+        alt="footprint"
+      />
+
+      <img
+        class="leftfoot1"
+        src="http://www.clipartbest.com/cliparts/nTB/pK7/nTBpK7GTA.svg"
+        alt="footprint"
+      />
+
+      <img
+        class="right"
+        src="http://www.clipartbest.com/cliparts/nTB/pK7/nTBpK7GTA.svg"
+        alt="footprint"
+      />
+
+      <img
+        class="leftfoot1"
+        src="http://www.clipartbest.com/cliparts/nTB/pK7/nTBpK7GTA.svg"
+        alt="footprint"
+      />
+
+      <img
+        class="right"
+        src="http://www.clipartbest.com/cliparts/nTB/pK7/nTBpK7GTA.svg"
+        alt="footprint"
+      />
+    </div>
+
+    <!-- pegadas 2-->
+
+    <div class="pegadas2" id="pegadas2">
+      <img
+        class="leftfoot2"
+        src="http://www.clipartbest.com/cliparts/nTB/pK7/nTBpK7GTA.svg"
+        alt="footprint"
+      />
+
+      <img
+        class="right2"
+        src="http://www.clipartbest.com/cliparts/nTB/pK7/nTBpK7GTA.svg"
+        alt="footprint"
+      />
+
+      <img
+        class="leftfoot2"
+        src="http://www.clipartbest.com/cliparts/nTB/pK7/nTBpK7GTA.svg"
+        alt="footprint"
+      />
+
+      <img
+        class="right2"
+        src="http://www.clipartbest.com/cliparts/nTB/pK7/nTBpK7GTA.svg"
+        alt="footprint"
+      />
+      <img
+        class="leftfoot2"
+        src="http://www.clipartbest.com/cliparts/nTB/pK7/nTBpK7GTA.svg"
+        alt="footprint"
+      />
+
+      <img
+        class="right2"
+        src="http://www.clipartbest.com/cliparts/nTB/pK7/nTBpK7GTA.svg"
+        alt="footprint"
+      />
+      <img
+        class="leftfoot2"
+        src="http://www.clipartbest.com/cliparts/nTB/pK7/nTBpK7GTA.svg"
+        alt="footprint"
+      />
+
+      <img
+        class="right2"
+        src="http://www.clipartbest.com/cliparts/nTB/pK7/nTBpK7GTA.svg"
+        alt="footprint"
+      />
+      <img
+        class="leftfoot2"
+        src="http://www.clipartbest.com/cliparts/nTB/pK7/nTBpK7GTA.svg"
+        alt="footprint"
+      />
+
+      <img
+        class="right2"
+        src="http://www.clipartbest.com/cliparts/nTB/pK7/nTBpK7GTA.svg"
+        alt="footprint"
+      />
+    </div>
+    <script src="/scripts/sobre_rpg.js"></script>
+  </body>
+</html>
+=======
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@400;800&family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles/sobre_rpg.css" />
+    <title>Hogwarts RPG</title>
+    <link
+      rel="icon"
+      href="/assets/images/logo_fav_icon.png"
+      type="image/x-icon"
+    />
+  </head>
+
+  <body>
+    <div class="header">
+      <img
+        src="/assets/images/hogwarts-roleplaying-game-high-resolution-logo-transparent.png"
+        class="logo"
+      />
+
+      <div class="header_right">
+        <a href="/index.html">Início</a>
+        <a href="/sobre_rpg.html">Sobre</a>
+        <a href="#personagens">Personagens</a>
+        <div class="btn_header" id="btn_header">
+          <div id="circle"></div>
+          <a href="#">Iniciar Sessão</a>
+        </div>
+      </div>
+    </div>
+    <div class="sobre">
+      <h1>HOGWARTS - ROLE PLAYING GAME</h1>
+      <h2>SOBRE O JOGO</h2>
+      <h3>
+        Hogwarts - RPG é um jogo interativo de mundo aberto, onde o céu é o
+        limite, ou não... Junte a galera e venha se divertir e soltar sua
+        imaginação no mundo de magias e aventuras fantasiosas!
+      </h3>
+    </div>
+
+    <div class="como_jogar">
+      <div class="btn_display">
+        <button
+          class="btn"
+          id="btn_instrucoes"
+          onclick="mostrarTextoPor('inInstrucoes')"
+        >
+          Como Jogar
+        </button>
+        <button
+          class="btn"
+          id="btn_regras"
+          onclick="mostrarTextoPor('inRegrasBasicas')"
+        >
+          Regras Básicas
+        </button>
+        <button
+          class="btn"
+          id="btn_criacao"
+          onclick="mostrarTextoPor('inCriacao')"
+        >
+          Criação de Personagens
+        </button>
+        <button
+          class="btn"
+          id="btn_perguntas"
+          onclick="mostrarTextoPor('inPerguntas')"
+        >
+          Perguntas Frequentes
+        </button>
+      </div>
+
+      <div class="areaDeTexto" id="areaDeTexto"></div>
+
+      <div
+        class="textoApareceAposClicarBotao"
+        id="inInstrucoes"
+        style="display: none"
+      >
+        <h2>COMO JOGAR</h2>
+        Você vai precisar de... <br />
+        <br />
+        Você mesmo e de 2-5 outros jogadores <br />
+        Pelo menos dois dados de seis lados <br />
+        Uma cópia da Ficha de Personagem para cada jogador <br />
+        Uma cópia de cada ficha de "NARRADOR" para você <br />
+        Uma cópia de cada ficha de "GRUPO" para todo o grupo <br />
+        Lápis, um para cada jogador <br />
+        Papel e/ou cadernos extras <br />
+        Post-Its (opcional)
+      </div>
+
+      <div
+        class="textoApareceAposClicarBotao"
+        id="inRegrasBasicas"
+        style="display: none"
+      >
+        <h2>REGRAS BÁSICAS</h2>
+        <h3>MOVIMENTOS</h3>
+        Sempre que um jogador quiser fazer alguma coisa - como conjurar um
+        feitiço, impressionar um professor ou enfrentar um monstro - ele fará um
+        movimento. Movimentos são todas as diferentes ações que o jogador pode
+        realizar na história. Movimentos dos jogadores geralmente dizem: "Quando
+        isso acontece, então essa outra coisa acontece". <br />
+        Os jogadores tem três tipos de movimentos. Movimentos Básicos acontecem
+        quando os jogadores jogam pra ver o que acontece. Movimentos Mágicos
+        acontecem quando os jogadores conjuram feitiços. Outro tipo de movimento
+        ocorre quando você Jogar Quadribol. O Narrador tem movimentos também,
+        mas eles funcionam um pouco diferente. <br />
+        Se algo na história solicitar um movimento, o jogador deve realizar
+        aquele movimento. Quando alguém realizar um movimento, o resultado deve
+        fazer parte da história. <br />
+        Você pode pedir o uso de um movimento, mas todos devem prestar atenção
+        ao momento que eles acontecem. <br />
+        Lembre-se, movimentos só acontecem quando algo acontece na história. Se
+        alguém disser "Eu quero Desafiar o perigo", você deve dizer: "ótimo,
+        como você faz isso"? <br />
+        Se quiser, você pode dar uma olhada rápida nos Movimentos Básicos e
+        Movimentos Mágicos com os jogadores.
+        <br />
+
+        <h3>ATRIBUTOS</h3>
+        Cada bruxo ou bruxa tem cinco atributos que os descrevem. Eles são
+        positivos em seus pontos fortes e negativos nos fracos. Os cinco
+        atributos são Bravura, Astúcia, Intelecto, Lealdade e Magia. Bravura
+        descreve a coragem, integridade, honestidade e fibra do bruxo. <br />
+        <br />
+        • Astúcia descreve a habilidade do bruxo em fingir esconder, enganar ou
+        manipular. <br />
+        • Intelecto descreve a vontade, conhecimento, memória e habilidade do
+        bruxo de obter informações. <br />
+        • Lealdade descreve a gentileza e dedicação de um bruxo à seus amigos e
+        colegas de classe.<br />
+        • Magia descreve a habilidade do bruxo em conjurar feitiços, preparar
+        poções ou utilizar objetos mágicos. Quando um movimento disser para um
+        jogador rolar, ele quase sempre vai pedir que ele some um atributo ao
+        resultado.
+        <br />
+
+        <h3>CONDIÇÕES</h3>
+        Algumas vezes, um bruxo ficará assustado ao enfrentar um monstro,
+        estressado de tanto trabalho escolar, ou invejoso da paixão de um amigo.
+        Eles podem quebrar um braço depois de cair de uma vassoura ou vomitar
+        lesmas depois de serem atingidos por uma maldição. Esses status
+        negativos são chamados de Condições. Condições podem ser emocionais ou
+        físicas. Quando alguém falha numa rolagem, eles podem sofrer uma
+        Condição como consequência. As oito Condições possíveis são Assustado,
+        Furioso, Estressado, Invejoso, Envergonhado, Ferido, Azarado e
+        Inconsciente. <br />
+        Condições Emocionais como Assustado, Furioso, Estressado, Invejoso e
+        Envergonhado somem quando o bruxo ou bruxa lida com seus sentimentos
+        negativos. Elas também podem ser tratadas se outro bruxo ou bruxa
+        conforta ou o apoia, ou mudada para outra Condição caso ele passe um
+        tempo com seu Familiar. Condições físicas como Ferido, Azarado e
+        Inconsciente devem ser curadas através de medicina ou magia.
+        <br />
+
+        <h3>SORTE</h3>
+        Cada bruxo tem uma pequena reserva de Sorte que eles podem usar numa
+        necessidade. Quando um jogador quiser fazer alguma coisa que ele
+        normalmente não poderia, como conjurar um feitiço que ele não conhece ou
+        realizar uma captura impossível no Quadribol, ele pode gastar um ponto
+        de Sorte para fazê-lo. Cada Bruxo tem 3 pontos de Sorte.
+        <br />
+
+        <h3>OBJETIVOS</h3>
+        Finalmente, todos tem objetivos em comum. Aqui vai uma lista de três
+        objetivos que todos vocês tentarão cumprir quando estiverem jogando. Os
+        objetivos do seus grupo são: <br />
+        <br />
+        1- Há muitas histórias a serem contadas sobre o imenso mundo mágico.
+        Contudo, essa aqui é sobre jovens bruxos e bruxas na escola. É seu
+        trabalho contar essa história e lhe dar vida. <br />
+        2- O tempo de um jovem bruxo na escola é mais do que assistir aulas e
+        fazer provas. Há maravilhas a experimentar, perguntas a responder e
+        ameaças a enfrentar. <br />
+        3- Esse jogo é sobre surpresa e colaboração. Vocês construirão a
+        história juntos, cena a cena e sessão a sessão; Tudo certo em planejar
+        coisas que você quer que aconteça. Mas no final, o resultado depende dos
+        protagonistas e dos dados.
+        <br />
+      </div>
+    </div>
+
+    <div
+      class="textoApareceAposClicarBotao"
+      id="inCriacao"
+      style="display: none"
+    >
+      <h2>CRIE OS PERSONAGENS</h2>
+
+      Agora é a hora de criar os protagonistas! Os jogadores devem preencher o
+      formulário na seção "CRIE SEU BRUXO". <br />
+      Em HOGWARTS - ROLE PLAYING GAME você poderá personalizar e estilizar a
+      aparência de seu personagem, escolher sua varinha, ambição, se será
+      nascido bruxo ou trouxa, matéria favorita da escola de magia e até o seu
+      animal místico familiar. <br />
+      Lembre-se: O narrador deve estar preparado para responder quaisquer
+      dúvidas que os jogadores possam ter.
+    </div>
+
+    <div
+      class="textoApareceAposClicarBotao"
+      id="inPerguntas"
+      style="display: none"
+    >
+      <h2>PERGUNTAS FREQUENTES</h2>
+
+      <h3>E SE...</h3>
+
+      <h4>1 - Alguém está falando muito ou está falando pouco?</h4>
+
+      Geralmente, você consegue consertar isso fazendo perguntas aos jogadores
+      calados. Perguntas do tipo "Como você se sente sobre isto?" ou "O que você
+      quer fazer agora?" são sempre boas. Certifique-se de usar o nome do bruxo!
+      <br />
+      Tenha em mente que, às vezes, jogadores calados ficam felizes em se sentar
+      e assistir à história. Não os force a participar, apenas ofereça a chance
+      de fazê-lo.<br />
+      Se for você que estiver falando demais, faça mais perguntas a todos. Você
+      pode perguntar coisas como "Qual a aparência dessa sala?" ou "O que o
+      fantasma fará agora?” O seu trabalho é descrever o mundo, mas não faz mal
+      compartilhar isso com os jogadores de vez em quando.
+
+      <h4>2 - Todos estão olhando pra mim, mas não sei o que dizer?</h4>
+
+      Não entre em pânico! Agora é um bom momento para fazer um Movimento do
+      Narrador. Introduza algo novo na história, como um novo aluno ou uma sala
+      desconhecida. Faça acontecer algo inesperado. Ou, faça uma pergunta. Então
+      veja como os protagonistas reagem. <br />
+      Se a história realmente te pegar de surpresa, não faz mal dizer, "eu
+      realmente não tenho certeza do que acontece a seguir!” Você pode então
+      fazer uma pequena pausa para descobrir. <br />
+      Você também pode perguntar aos jogadores o que eles acham que deve
+      acontecer. Lembre-se, essa é uma história colaborativa!
+
+      <h4>3 - Não tivermos resolvido todos os Mistérios?</h4>
+
+      Você pode terminar sua história sem responder todas as perguntas dos
+      Mistérios. Se os jogadores parecerem felizes com o modo como a história
+      acabou, não precisa se preocupar com as perguntas sem resposta.<br />
+      No entanto, se eles apontarem que vários Mistérios ainda não foram
+      resolvidos, sua história pode não ter acabado ainda! Talvez você queira
+      jogar mais um pouco. Ou, se estiver sem tempo no momento, você pode marcar
+      outra sessão da história.<br />
+      Caso não possa fazer qualquer um dos dois, você pode perguntar aos
+      jogadores, "quais vocês acham que são as respostas para essas perguntas"?
+      Então tente falar rapidamente sobre algumas soluções para os Mistérios não
+      resolvidos.
+
+      <h4>4 - Não soubermos o que certo feitiço faz?</h4>
+
+      A seção de "FEITIÇOS" só inclui os nomes dos feitiços e encantamentos.
+      Isto é proposital. Quando alguém lança um feitiço, eles podem descrever o
+      seu efeito. Desde que esse efeito se encaixe no nome do feitiço e pareça
+      justo para todos, vá em frente. <br />
+      A seção de "FEITIÇOS" tem algumas sugestões sobre como alguns tipos de
+      feitiços podem causar ou prevenir Condições. No entanto, a maioria dos
+      feitiços faz algo apenas na história, como fazer as coisas levitarem ou
+      causar soluços em alguém. <br />
+      Lembre-se, para lançar um feitiço, um bruxo deve dizer corretamente o
+      encantamento e agitar sua varinha!
+
+      <h4>5 - O meu grupo não quiser usar todas as regras?</h4>
+
+      Não há problema! Você pode usar tantas regras quanto quiser. Se o seu
+      grupo quiser jogar um jogo sem Condições, não dê nenhuma Condição à
+      ninguém. Se não quiser escrever e riscar Mistérios, não pergunte sobre
+      Mistérios. Fique à vontade!
+
+      <h4>
+        6 - Eu não souber nada sobre Harry Potter, ou alguém souber mais do que
+        eu?
+      </h4>
+
+      Tudo bem. Essa é a história do seu grupo, e de mais ninguém. Não tem
+      problema adaptar as coisas para caber em sua história. Você não precisa
+      seguir os livros e filmes à perfeição. <br />
+      Se alguém lhe corrigir em algo sobre o mundo, use isso, mas só se fizer
+      sentido para sua história! Se alguém está atrapalhando a história
+      corrigindo as pessoas o tempo todo, lembre-o gentilmente de que vocês
+      estão criando uma história original. Até os filmes mudaram ou omitiram
+      coisas dos livros, e eles ainda são ótimos!<br />
+      Se você realmente precisa saber alguma coisa, você sempre pode dar uma
+      pausa na história por alguns segundos e procurar online!
+    </div>
+
+    <div class="pegadas1" id="pegadas1">
+      <img
+        class="leftfoot1"
+        src="http://www.clipartbest.com/cliparts/nTB/pK7/nTBpK7GTA.svg"
+        alt="footprint"
+      />
+
+      <img
+        class="right"
+        src="http://www.clipartbest.com/cliparts/nTB/pK7/nTBpK7GTA.svg"
+        alt="footprint"
+      />
+
+      <img
+        class="leftfoot1"
+        src="http://www.clipartbest.com/cliparts/nTB/pK7/nTBpK7GTA.svg"
+        alt="footprint"
+      />
+
+      <img
+        class="right"
+        src="http://www.clipartbest.com/cliparts/nTB/pK7/nTBpK7GTA.svg"
+        alt="footprint"
+      />
+
+      <img
+        class="leftfoot1"
+        src="http://www.clipartbest.com/cliparts/nTB/pK7/nTBpK7GTA.svg"
+        alt="footprint"
+      />
+
+      <img
+        class="right"
+        src="http://www.clipartbest.com/cliparts/nTB/pK7/nTBpK7GTA.svg"
+        alt="footprint"
+      />
+
+      <img
+        class="leftfoot1"
+        src="http://www.clipartbest.com/cliparts/nTB/pK7/nTBpK7GTA.svg"
+        alt="footprint"
+      />
+
+      <img
+        class="right"
+        src="http://www.clipartbest.com/cliparts/nTB/pK7/nTBpK7GTA.svg"
+        alt="footprint"
+      />
+
+      <img
+        class="leftfoot1"
+        src="http://www.clipartbest.com/cliparts/nTB/pK7/nTBpK7GTA.svg"
+        alt="footprint"
+      />
+
+      <img
+        class="right"
+        src="http://www.clipartbest.com/cliparts/nTB/pK7/nTBpK7GTA.svg"
+        alt="footprint"
+      />
+    </div>
+
+    <!-- pegadas 2-->
+
+    <div class="pegadas2" id="pegadas2">
+      <img
+        class="leftfoot2"
+        src="http://www.clipartbest.com/cliparts/nTB/pK7/nTBpK7GTA.svg"
+        alt="footprint"
+      />
+
+      <img
+        class="right2"
+        src="http://www.clipartbest.com/cliparts/nTB/pK7/nTBpK7GTA.svg"
+        alt="footprint"
+      />
+
+      <img
+        class="leftfoot2"
+        src="http://www.clipartbest.com/cliparts/nTB/pK7/nTBpK7GTA.svg"
+        alt="footprint"
+      />
+
+      <img
+        class="right2"
+        src="http://www.clipartbest.com/cliparts/nTB/pK7/nTBpK7GTA.svg"
+        alt="footprint"
+      />
+      <img
+        class="leftfoot2"
+        src="http://www.clipartbest.com/cliparts/nTB/pK7/nTBpK7GTA.svg"
+        alt="footprint"
+      />
+
+      <img
+        class="right2"
+        src="http://www.clipartbest.com/cliparts/nTB/pK7/nTBpK7GTA.svg"
+        alt="footprint"
+      />
+      <img
+        class="leftfoot2"
+        src="http://www.clipartbest.com/cliparts/nTB/pK7/nTBpK7GTA.svg"
+        alt="footprint"
+      />
+
+      <img
+        class="right2"
+        src="http://www.clipartbest.com/cliparts/nTB/pK7/nTBpK7GTA.svg"
+        alt="footprint"
+      />
+      <img
+        class="leftfoot2"
+        src="http://www.clipartbest.com/cliparts/nTB/pK7/nTBpK7GTA.svg"
+        alt="footprint"
+      />
+
+      <img
+        class="right2"
+        src="http://www.clipartbest.com/cliparts/nTB/pK7/nTBpK7GTA.svg"
+        alt="footprint"
+      />
+    </div>
+    <script src="/scripts/sobre_rpg.js"></script>
+  </body>
+</html>
+>>>>>>> 4096fa3e95635a480b93dc5b4073d42931071b8b
