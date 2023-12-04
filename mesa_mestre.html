@@ -3,18 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles/styleMestre.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./styles/styleMestre.css">
     <title>Mesa do mestre</title>
 </head>
 <body class="d-flex flex-column h-100"> <!-- Adiciona uma classe d-flex e flex-column para ocupar a altura total da tela -->
     <header>
-        <img src="./image/brasoesok.jpg" alt="imagem castelo" title="Voltar para página inicial">
+        <img src="./image/brasoesok2.png" alt="imagem castelo" title="Voltar para página inicial">
     </header>
-    <div class="container flex-grow-1 mt-4"> <!-- Utiliza flex-grow-1 para preencher a altura total -->
+    <div class="container-fluid flex-grow-1 mt-0"> <!-- Utiliza flex-grow-1 para preencher a altura total -->
         <div class="row h-100">
             <!-- GRID ESQUERDO -->
-            <div class="col-md-3 bg-primary h-100">
+            <div class="col-md-3 h-100 px-0">
                 <img id="dice_d20" src="./image/dice1.png" class="img-fluid mb-3" alt="imagem do dado"> 
                 <img id="wandyButtom" src="./image/wandy.png" class="img-fluid" alt="img-fluid redimensionar-wandy"  title="Clique para girar o dado!">   
                 <audio id="meu-audio">
@@ -23,16 +23,16 @@
                 </audio>
             </div>
             <!-- GRID CENTRO -->
-            <div class="col-md-6 bg-secondary h-100">
+            <div class="col-md-6 h-100 px-0" id="foto_mesa">
                 <div class="background-image"></div>
             </div>
             <!-- GRID RIGHT -->
-            <div class="col-md-3 bg-info h-100">
+            <div class="col-md-3 h-100 px-0">
                 <img src="./image/hat.png" class="img-fluid mb-3" id="hat" alt="Chapéu do Mestre">
-                <textarea placeholder="Olá sou o chapéu seletor, te acompanharei nessa incrível jornada. Aguarde as instruções do mestre nesse chat. Cuidado, Voldemort está a procura de uma nova vítima..."></textarea>
+                <textarea placeholder="Olá sou o chapéu seletor, te acompanharei nessa incrível jornada. Aguarde as instruções do mestre nesse chat. Cuidado, Voldemort está a procura de uma nova vítima..." rows="8" style="width: 100%;"></textarea>
                 <form id="message-form" class="message-form">
-                    <input type="text" id="message-input" placeholder="Digite sua mensagem...">
-                    <button type="submit">Enviar</button>
+                    <input type="text" id="message-input" placeholder="Digite sua mensagem..." style="width: 80%;">
+                    <button type="submit" style="width: 18%;">Enviar</button>
                 </form>
             </div>
         </div>

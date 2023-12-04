@@ -1,90 +1,108 @@
-/* Resetando margem e preenchimento padrão */
-* {
+/* Resetting default margin and padding */
+@media screen and (max-width: 1024px) {
+  /* Estilos para telas menores que 1024px */
+}
+
+body {
+  margin: 0;
+  align-items: center;
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  padding 0;
   
-  padding: 0;
-  box-sizing: border-box;
-  background-color: bisque;
-}
-body{
-  margin: 0px;
-  background-color: black;
-}
-.container{
-  padding-right: 0;
-  padding-left: 0;
 }
 
 /* Estilos do cabeçalho */
 header {
   width: 100%;
+  box-sizing: border-box;
 }
+.container-fluid{
+  padding-left: 0;
+  padding-right: 0;
+}
+
 
 header img {
   width: 100%;
   height: auto;
-  display: block;
+  display: flex;
+  
+  
 }
 
-/* Classes do Bootstrap para colunas */
-.col-md-4,
-.col-md-8 {
-  position: relative;
-  min-height: 1px;
-  padding-right: 15px;
-  padding-left: 15px;
+/* Remove h-100 from columns */
+
+.col-md-3,
+.col-md-6,
+.col-md-3 {
+  padding: 0;  
 }
 
-/* Larguras e margens das colunas */
-.col-md-4 {
-  flex-basis: calc(33.3333% - 30px);
-  margin: 15px;
+
+/* Adjust Bootstrap Grid Columns */
+.col-md-3 {
+  flex-basis: 25%;
+  margin: 0; /* Reset margin */
+  
+}
+.col-md-3.bg-primary {
+  background-color: rgb(144, 17, 17);
 }
 
-.col-md-8 {
-  flex-basis: calc(66.6667% - 30px);
-  margin: 15px;
+.col-md-6 {
+  flex-basis: 50%;
+  margin: 0; /* Reset margin */
 }
 
-/* Imagens e elementos responsivos */
-#dice_d20 {
-  width: 250px; /* Tamanho desejado */
-  height: auto; /* Mantém a proporção */
-}
-#wandyButtom {
-  width: 75px; /* Tamanho desejado */
-  height: auto; /* Mantém a proporção */
-}
-img,
+/* Adjusting the height of the background image */
 .background-image {
-  max-width: 100%;
-  height: auto;
-}
-
-
-/* Estilos do formulário à direita */
-textarea {
-  width: calc(100% - 80px);
-  padding: 5px;
-  margin-top: 10px;
-}
-
-button {
-  width: 80px;
-  padding: 5px;
-  background-color: #ccc;
-  border: none;
-  cursor: pointer;
-}
-
-/* Estilo da imagem de fundo */
-.background-image {
-  background-image: url(../image/table1.jpeg);
+  background-image: url(../image/table5.jpeg);
   background-size: cover;
   background-position: center;
+  opacity: 0.7;
+  height: 63.7vh; /* Occupy 100% of the screen height */
+  border-radius: 3px;
+
+}
+#hat{
+  width: 250px;
+  background-color: #597A1F;
+  margin-left: 7vh;
   opacity: 0.8;
-  height: 100vh; /* Alteração para ocupar 100% da altura da tela */
+}
+#dice_d20{
+  width: 350px;
+  background-color: #B22726;
+  transition: background-color 0.3s ease-in-out;
+  opacity: 0.9;
+}
+#wandyButtom{
+  width: 100px;
+  background-color: #B22726;
+  margin-left: 20px;
+  opacity: 0.7;
 }
 
-
-
+.row{
+  background-color:#B22726;
   
+}
+textarea{
+  width: 450px;
+  height: max-content;
+}
+
+/* Seleciona a primeira col-md-3 dentro da row e define o background color */
+.row > .col-md-3:first-child {
+  background-color: #B22726; /* Cor para a coluna da esquerda */
+}
+
+/* Seleciona a última col-md-3 dentro da row e define o background color */
+.row > .col-md-3:last-child {
+  background-color: #ffffff; /* Cor para a coluna da direita */
+}
+.row .col-md-3:last-child {
+  background-color:#597A1F;
+}
