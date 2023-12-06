@@ -1,34 +1,43 @@
-document.getElementById('wandyButtom').addEventListener('click', function() {
-  var audio = document.getElementById('meu-audio');
+document.getElementById('owl').addEventListener('click', function() {
+  var audio = document.getElementById('owlsound');
   if (audio.paused) {
-    audio.play();
+      audio.play();
   } else {
-    audio.pause();
-    audio.currentTime = 0;
+      audio.pause();
+      audio.currentTime = 0;
   }
 });
 
+document.getElementById('wandyButtom').addEventListener('click', function() {
+  var audio = document.getElementById('meu-audio');
+  if (audio.paused) {
+      audio.play();
+  } else {
+      audio.pause();
+      audio.currentTime = 0;
+  }
+  rollDice();
+});
+
+
+
 function rollDice() {
-    const diceFace = document.getElementById('dice-face');
-    const result = Math.floor(Math.random() * 20) + 1; // Generates a random number between 1 and 20
+  const diceFace = document.getElementById('dice-face');
+  const result = Math.floor(Math.random() * 20) + 1; // Gera um número aleatório entre 1 e 20
   
-    
-    diceFace.style.display = 'block';
-    diceFace.textContent = result;
-  }
+  diceFace.textContent = result;
 
-  const mensagem= "Bem vindo a famosa escola de Howgtarasjh jovem aprendiz de magia, você irá se aventurar em uma jornada de aprendizado!!";
-  const mensagemElement = document.getElementById('mensagem');
-  let index = 0;
+  const screenWidth= window.innerWidth;
+  const fontSize = screenWidth * 0.07;
 
-  function escreverMensagem(){
-    if (index < mensagem.length){
-        mensagemElement.innerHTML += mensagem.charAt(index);
-        index++;
-        setTimeout(escreverMensagem, 50);
-    }
-  }
+  diceFace.style.fontSize = `${fontSize}px`;
 
-  window.onload = escreverMensagem;
+  // Envia o número gerado para o textarea
+  const messageTextarea = document.querySelector('textarea');
+  messageTextarea.value = `O número gerado foi: ${result}`;
+}
+
+
+
   
   
