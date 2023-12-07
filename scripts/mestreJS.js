@@ -27,10 +27,7 @@ function rollDice() {
   
   diceFace.textContent = result;
 
-  const screenWidth= window.innerWidth;
-  const fontSize = screenWidth * 0.07;
-
-  diceFace.style.fontSize = `${fontSize}px`;
+  
 
   // Envia o número gerado para o textarea
   const messageTextarea = document.querySelector('textarea');
