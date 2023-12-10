@@ -165,7 +165,7 @@ textarea{
     top: 52%;
     left: 38%;
     transform: translate(-10%, -50%);
-    font-size: 2rem;!important
+    font-size: 2rem;
     z-index: 1;
     color: rgb(242, 5, 5); /* Altere a cor do número conforme desejado */
     text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
@@ -173,7 +173,7 @@ textarea{
   
 }
 
-@media screen (max-width: 1024px){
+@media screen and (max-width: 1024px){
   .col-md-3 {
     flex-basis: 100%; /* Em telas menores, ocupa toda a largura disponível */
     display: flex;
@@ -209,10 +209,10 @@ textarea{
   }
   .number-overlay {
     position: absolute;
-    top: 50%;
-    left: 35%;
+    top: 45%;
+    left: 40%;
     transform: translate(-10%, -50%);
-    font-size: 2rem;!important
+    font-size: 2rem;
     z-index: 1;
     color: rgb(242, 5, 5); /* Altere a cor do número conforme desejado */
     text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
@@ -238,7 +238,7 @@ textarea{
     text-align: center; /* Alinha o texto centralmente */
   }
   #dice_d20 {
-    width: 15%; /* Defina o tamanho desejado para a imagem em telas menores */
+    width: 12%; /* Defina o tamanho desejado para a imagem em telas menores */
     margin-left: -10%; /* Ajuste a margem conforme necessário */
     margin-top: 10%; /* Ajuste a margem conforme necessário */
   }
@@ -257,9 +257,9 @@ textarea{
   .number-overlay {
     position: absolute;
     top: 35%;
-    left: 33%;
+    left: 40%;
     transform: translate(-10%, -50%);
-    font-size: 2rem;!important
+    font-size: 2rem;
     z-index: 1;
     color: rgb(242, 5, 5); /* Altere a cor do número conforme desejado */
     text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
@@ -291,9 +291,9 @@ textarea{
   .number-overlay {
     position: absolute;
     top: 21%;
-    left: 44%;
+    left: 55%;
     transform: translate(-10%, -50%);
-    font-size: 0.2rem;!important
+    font-size: 0.2rem;
     z-index: 1;
     color: rgb(242, 5, 5); /* Altere a cor do número conforme desejado */
     text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
