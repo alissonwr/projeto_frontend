@@ -82,6 +82,7 @@ header img:hover{
   
   
 }
+/*Classe do número gerado em JS*/
 .number-overlay {
   position: absolute;
   top: 38%;

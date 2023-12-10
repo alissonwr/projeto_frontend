@@ -20,11 +20,11 @@ document.getElementById('wandyButtom').addEventListener('click', function() {
 });
 
 
-
+//Função que gera número aleatório
 function rollDice() {
   const diceFace = document.getElementById('dice-face');
   const result = Math.floor(Math.random() * 20) + 1; // Gera um número aleatório entre 1 e 20
-  
+  //Impressão do número
   diceFace.textContent = result;
 
   

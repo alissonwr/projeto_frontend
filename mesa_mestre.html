@@ -7,15 +7,16 @@
     <link rel="stylesheet" href="./styles/styleMestre.css">
     <title>Mesa do mestre</title>
 </head>
-<body class="d-flex flex-column h-100 background-image img-fluid"> <!-- Adiciona uma classe d-flex e flex-column para ocupar a altura total da tela -->
+<body class="d-flex flex-column h-100 background-image img-fluid"> 
     <header>
         <img src="./image/header2.jpg" alt="imagem castelo" title="Voltar para página inicial">
     </header>
-    <div class="container-fluid flex-grow-1 mt-0"> <!-- Utiliza flex-grow-1 para preencher a altura total -->
-        <!--div class="background-image"></!--div-->
+    <div class="container-fluid flex-grow-1 mt-0"> 
+    
         <div class="row h-100">
             <!-- GRID ESQUERDO -->
             <div class="col-md-3 col-sm-4 h-100 px-0">
+                <!--div do número gerado em JS em css está na classe number-overlay-->
                 <div id="dice-face" class="d-flex justify-content-center align-items-center number-overlay" style="height: 100%; font-size: 4rem;"></div>
                 <img id="dice_d20" src="./image/dice1.png" class="img-fluid mb-3" title="Dado d20, clique na varinha" alt="imagem do dado"> 
                 <img id="wandyButtom" src="./image/wandy.png" class="img-fluid" alt="img-fluid redimensionar-wandy"  title="Clique para girar o dado!">   
@@ -30,7 +31,7 @@
             </div>
             <!-- GRID RIGHT -->
             <div class="col-md-3 col-sm-4 h-100 px-0">
-                <!--img src="./image/hat.png" class="img-fluid mb-3" id="hat" alt="Chapéu do Mestre"-->
+                
                 <textarea placeholder="Chat com o mestre e seus colegas de aventuras!!!" rows="14" style="width: 100%;"></textarea>
                 <form id="message-form" class="message-form">
                     <input type="text" id="message-input" placeholder="Digite sua mensagem..." style="width: 80%;"> 
