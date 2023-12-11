@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">-->
+    
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
     
     <link rel="stylesheet" href="./styles/styleMestre.css">
     <link href="https://fonts.cdnfonts.com/css/harry-potter" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
     <title>Mesa do mestre</title>
 </head>
 <body class="d-flex flex-column h-100 background-image img-fluid"> 
@@ -31,7 +32,9 @@
                 </div>
             </div>
         </nav>
-        <img src="./image/header2.jpg" alt="imagem castelo" title="Voltar para página inicial">
+        <a href="index.html" title="Voltar para página inicial">
+            <img src="./image/header2.jpg" alt="imagem castelo">
+        </a>
     </header>
     <div class="container-fluid flex-grow-1 mt-0"> 
     
@@ -49,12 +52,17 @@
             </div>
             <!-- GRID CENTRO -->
             <div class="col-md-6 col-sm-4 h-100 px-0" id="foto_mesa">
-                
+                <form id="username-form">
+                    <input type="text" id="username-input" placeholder="Digite seu nome de usuário">
+                    <button type="button" id="submit-username">Enviar</button>
+                  </form>
+                  <button class="mute-button" onclick="toggleMute('meu-audio')">MUTE-DICE</button>
+                  <button class="mute-button" onclick="toggleMute('owlsound')">MUTE-OWL</button> 
             </div>
             <!-- GRID RIGHT -->
             <div class="col-md-3 col-sm-4 h-100 px-0">
                 
-                <textarea placeholder="Chat com o mestre e seus colegas de aventuras!!!" rows="14" style="width: 100%;"></textarea>
+                <textarea id ="chat-textarea" placeholder="Chat com o mestre e seus colegas de aventuras!!!" rows="14" style="width: 100%;"></textarea>
                 <form id="message-form" class="message-form">
                     <input type="text" id="message-input" placeholder="Digite sua mensagem..." style="width: 80%;"> 
                     <img  src="./image/owlbuttom2.png" class="img-fluid" id="owl"></img>

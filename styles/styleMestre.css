@@ -9,7 +9,6 @@ body {
   padding: 0;
 }
 .background-image {
-  /* Define a imagem de fundo e seu ajuste */
   background-image: url(../image/tb2.jpeg);
   background-size: cover;
   background-position: center;
@@ -70,20 +69,20 @@ header img:hover{
   
   
 }
-/*Classe do número gerado em JS*/
+
 .number-overlay {
   position: absolute;
   top: 63%;
   left: 11%;
   transform: translate(-50%, -50%);
   z-index: 1;
-  color: rgb(242, 5, 5); /* Altere a cor do número conforme desejado */
-  text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5); /* Adiciona sombra ao texto para destacá-lo */
-  /* Adicione mais estilos conforme necessário */
+  color: rgb(242, 5, 5); 
+  text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5); 
+  
 }
 
 textarea, input[type="text"] {
-  opacity: 0.7; /* Valor de opacidade (ajuste conforme necessário) */
+  opacity: 0.7; 
   margin-top: 20px;
   margin-bottom: -20px;
   width: 45vh;
@@ -93,7 +92,7 @@ textarea, input[type="text"] {
 }
 
 #owl[title] {
-  font-size: 1rem; /* Tamanho base responsivo para o título do botão */
+  font-size: 1rem; 
 
 }
 
@@ -106,11 +105,35 @@ textarea{
 #owl {
   width: 18%;
   height: auto;
-  vertical-align: middle; /* Alinhe verticalmente com o texto */
-  position: relative; /* Para posicionar em relação ao contêiner pai */
+  vertical-align: middle; 
+  position: relative; 
   border: 4px solid rgb(0, 0, 0);
 }
 
+.swal2-popup{
+  background-color: rgb(0, 0, 0, 0.6);
+  color:rgb(255, 255, 255);
+  text-shadow: 4px 4px 4px rgba(100, 100, 100, 0.5);
+}
+
+#username-form {
+  opacity: 0.7; 
+  margin-left: 20%;
+  margin-top: 10%;
+  width: 45vh;
+  height: 10%;
+  border-radius: 5px;
+  display: block;
+}
+#username-form button{
+  margin-top: 7%;
+}
+  
+
+.col-md-6 .mute-button {
+  margin-top: 380px; 
+  margin-left: 100px; 
+}
 
 /*Menu hamburguer*/
 
@@ -123,147 +146,153 @@ textarea{
 }
 
 
-
-
-
-@media screen and (max-width: 1200px){
-  .col-md-3 {
-    flex-basis: 100%; /* Em telas menores, ocupa toda a largura disponível */
-    display: flex;
-    justify-content: center; /* Centraliza o conteúdo horizontalmente */
-    align-items: center; /* Centraliza o conteúdo verticalmente */
-    text-align: center; /* Alinha o texto centralmente */
-  }
-
-  .col-md-6 {
-    flex-basis: 100%; /* Em telas menores, ocupa toda a largura disponível */
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* Centraliza o conteúdo horizontalmente */
-    align-items: center; /* Centraliza o conteúdo verticalmente */
-    text-align: center; /* Alinha o texto centralmente */
-  }
+@media screen and (max-width: 1200px) {
+  
+  
   #dice_d20 {
-    width: 50%; /* Defina o tamanho desejado para a imagem em telas menores */
-    margin-left: -10%; /* Ajuste a margem conforme necessário */
-    margin-top: 10%; /* Ajuste a margem conforme necessário */
+    width: 40%; 
+    
+    margin-left: 15%; 
+    margin-top: 0%; 
   }
-  #wandyButtom{
-    width: 10vh;
+
+  #wandyButtom {
+    width: 7vh;
+    margin-top: 60%;
+    margin-left: -40%;
+    
   }
+
   #message-input {
-    width: 80%; /* Ajuste a largura conforme necessário */
-    margin-bottom: 10px; /* Adicione espaço entre o input e a imagem */
+    
+    width: 90%; 
+    margin-bottom: 10px;
   }
 
   #owl {
-    width: 80px; /* Ajuste o tamanho da imagem do owl para telas menores */
+    width: 80px; 
     height: auto;
   }
+
   .number-overlay {
     position: absolute;
-    top: 52%;
-    left: 38%;
+    top: 43%;
+    left: 8%;
     transform: translate(-10%, -50%);
     font-size: 2rem;
     z-index: 1;
-    color: rgb(242, 5, 5); /* Altere a cor do número conforme desejado */
+    color: rgb(242, 5, 5); 
     text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
   }
-  
+
+  textarea {
+    
+    width: 90%;
+    
+    height: 150px;
+    
+  }
 }
+
 
 @media screen and (max-width: 1024px){
-  .col-md-3 {
-    flex-basis: 100%; /* Em telas menores, ocupa toda a largura disponível */
-    display: flex;
-    justify-content: center; /* Centraliza o conteúdo horizontalmente */
-    align-items: center; /* Centraliza o conteúdo verticalmente */
-    text-align: center; /* Alinha o texto centralmente */
+   
+  
+   #dice_d20 {
+    width: 40%; 
+    
+    margin-left: 15%; 
+    margin-top: 0%; 
   }
 
-  .col-md-6 {
-    flex-basis: 100%; /* Em telas menores, ocupa toda a largura disponível */
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* Centraliza o conteúdo horizontalmente */
-    align-items: center; /* Centraliza o conteúdo verticalmente */
-    text-align: center; /* Alinha o texto centralmente */
+  #wandyButtom {
+    width: 7vh;
+    margin-top: 60%;
+    margin-left: -40%;
+    
   }
-  #dice_d20 {
-    width: 10%; /* Defina o tamanho desejado para a imagem em telas menores */
-    margin-left: -10%; /* Ajuste a margem conforme necessário */
-    margin-top: 10%; /* Ajuste a margem conforme necessário */
-  }
-  #wandyButtom{
-    width: 8vh;
-  }
+
   #message-input {
-    width: 80%; /* Ajuste a largura conforme necessário */
-    margin-bottom: 10px; /* Adicione espaço entre o input e a imagem */
+    
+    width: 90%; 
+    margin-bottom: 10px;
   }
 
   #owl {
-    width: 80px; /* Ajuste o tamanho da imagem do owl para telas menores */
+    width: 80px; 
     height: auto;
   }
+
   .number-overlay {
     position: absolute;
-    top: 45%;
-    left: 40%;
+    top: 38%;
+    left: 8%;
     transform: translate(-10%, -50%);
     font-size: 2rem;
     z-index: 1;
-    color: rgb(242, 5, 5); /* Altere a cor do número conforme desejado */
+    color: rgb(242, 5, 5); 
     text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
   }
-  
+
+  textarea {
+    
+    width: 90%;
+    
+    height: 150px;
+    
+  }
 }
 
+ 
+  
+
+
 @media screen and (max-width: 768px) {
-  .col-md-3 {
-    flex-basis: 100%; /* Em telas menores, ocupa toda a largura disponível */
-    display: flex;
-    justify-content: center; /* Centraliza o conteúdo horizontalmente */
-    align-items: center; /* Centraliza o conteúdo verticalmente */
-    text-align: center; /* Alinha o texto centralmente */
-  }
-
-  .col-md-6 {
-    flex-basis: 100%; /* Em telas menores, ocupa toda a largura disponível */
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* Centraliza o conteúdo horizontalmente */
-    align-items: center; /* Centraliza o conteúdo verticalmente */
-    text-align: center; /* Alinha o texto centralmente */
-  }
+  
+ 
   #dice_d20 {
-    width: 12%; /* Defina o tamanho desejado para a imagem em telas menores */
-    margin-left: -10%; /* Ajuste a margem conforme necessário */
-    margin-top: 10%; /* Ajuste a margem conforme necessário */
-  }
-  #wandyButtom{
-    width: 6vh;
-  }
-  #message-input {
-    width: 80%; /* Ajuste a largura conforme necessário */
-    margin-bottom: 10px; /* Adicione espaço entre o input e a imagem */
-  }
+   width: 40%; 
+   
+   margin-left: 15%; 
+   margin-top: 0%; 
+ }
 
-  #owl {
-    width: 80px; /* Ajuste o tamanho da imagem do owl para telas menores */
-    height: auto;
-  }
-  .number-overlay {
-    position: absolute;
-    top: 35%;
-    left: 40%;
-    transform: translate(-10%, -50%);
-    font-size: 2rem;
-    z-index: 1;
-    color: rgb(242, 5, 5); /* Altere a cor do número conforme desejado */
-    text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
-  }
+ #wandyButtom {
+   width: 7vh;
+   margin-top: 60%;
+   margin-left: -40%;
+   
+ }
+
+ #message-input {
+   
+   width: 90%; 
+   margin-bottom: 10px;
+ }
+
+ #owl {
+   width: 80px; 
+   height: auto;
+ }
+
+ .number-overlay {
+   position: absolute;
+   top: 29%;
+   left: 8%;
+   transform: translate(-10%, -50%);
+   font-size: 2rem;
+   z-index: 1;
+   color: rgb(242, 5, 5); 
+   text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
+ }
+
+ textarea {
+   
+   width: 90%;
+   
+   height: 150px;
+   
+ }
 }
 
 
@@ -271,38 +300,36 @@ textarea{
 @media screen and (max-width: 426px) {
   .col-md-3,
   .col-md-6 {
-    flex-basis: 100%; /* Ocupa toda a largura disponível */
+    flex-basis: 100%; 
   }
 
   #message-input {
-    width: 90%; /* Ajuste a largura conforme necessário */
-    margin-bottom: 10px; /* Espaço entre o input e a imagem */
+    width: 90%; 
+    margin-bottom: 10px; 
   }
 
   #owl {
-    width: 40px; /* Ajuste o tamanho da imagem do owl para telas muito pequenas */
+    width: 40px; 
     height: auto;
   }
   #dice_d20 {
-    width: 15%; /* Defina o tamanho desejado para a imagem em telas menores */
-    margin-left: 25%; /* Ajuste a margem conforme necessário */
-    margin-top: 10%; /* Ajuste a margem conforme necessário */
+    width: 15%; 
+    margin-left: 8%; 
+    margin-top: -2%;
   }
   .number-overlay {
     position: absolute;
-    top: 21%;
-    left: 55%;
+    top: 17%;
+    left: 12%;
     transform: translate(-10%, -50%);
     font-size: 0.2rem;
     z-index: 1;
-    color: rgb(242, 5, 5); /* Altere a cor do número conforme desejado */
+    color: rgb(242, 5, 5); 
     text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
   }
   #wandyButtom{
     width: 5vh;
-  
-    
-    
+    margin-left: -18%;
+    margin-top: 20%;    
   }
 }
-
