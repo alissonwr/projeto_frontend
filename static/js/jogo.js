@@ -13,7 +13,7 @@ const loop = setInterval(() => {
 
     const pipePosition = pipe.offsetLeft;
     const harryPosition = +window.getComputedStyle(harry).bottom.replace('px', '');
-    
+
     if (pipePosition <= 30 && pipePosition > 0 && harryPosition < 140) {
 
         pipe.style.animation = 'none';
@@ -22,7 +22,7 @@ const loop = setInterval(() => {
         harry.style.animation = 'none';
         harry.style.bottom = `${harryPosition}px`
 
-        harry.src = '../image/dobby-con2020-dobby-con.gif'
+        harry.src = '../static/img/vassoura.gif'
 
         clearInterval(loop);
 
@@ -30,3 +30,4 @@ const loop = setInterval(() => {
 
 }, 10);
 document.addEventListener('keydown', jump);
+

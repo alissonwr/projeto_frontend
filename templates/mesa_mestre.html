@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    
+    <link rel="stylesheet" href="./styles/styleMestre.css">
+    <link href="https://fonts.cdnfonts.com/css/harry-potter" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <title>Mesa do mestre</title>
+</head>
+<body class="d-flex flex-column h-100 background-image img-fluid"> 
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-transparent fixed-top">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html" title="Index">Harry Potter</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                        <a class="nav-link active" aria-current="page" href="Inicio.html" title="Início">Início</a>
+                        <a class="nav-link text-white" href="sobre_rpg.html" title="Sobre">Sobre</a>
+                        <a class="nav-link text-white" href="mesa_mestre.html" title="Mesa">Mesa</a>
+                        <a class="nav-link text-white" href="ficha-bruxo.html" title="Personagens">Personagens</a>
+                        <a class="btn btn-primary btn-lg text-white" href="#">Login</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <a href="index.html" title="Voltar para página inicial">
+            <img src="./image/header2.jpg" alt="imagem castelo">
+        </a>
+    </header>
+    <div class="container-fluid flex-grow-1 mt-0"> 
+    
+        <div class="row h-100">
+            <!-- GRID ESQUERDO -->
+            <div class="col-md-3 col-sm-4 h-100 px-0">
+                <!--div do número gerado em JS em css está na classe number-overlay-->
+                <div id="dice-face" class="d-flex justify-content-center align-items-center number-overlay" style="height: 100%; font-size: 4rem;"></div>
+                <img id="dice_d20" src="./image/dice1.png" class="img-fluid mb-3" title="Dado d20, clique na varinha" alt="imagem do dado"> 
+                <img id="wandyButtom" src="./image/wandy.png" class="img-fluid" alt="img-fluid redimensionar-wandy"  title="Clique para girar o dado!">   
+                <audio id="meu-audio">
+                    <source src="./image/dice.mp3" type="audio/mpeg">
+                    Seu navegador não suporta a reprodução de áudio.
+                </audio>
+            </div>
+            <!-- GRID CENTRO -->
+            <div class="col-md-6 col-sm-4 h-100 px-0" id="foto_mesa">
+                <form id="username-form">
+                    <input type="text" id="username-input" placeholder="Digite seu nome de usuário">
+                    <button type="button" id="submit-username">Enviar</button>
+                  </form>
+                  <button class="mute-button" onclick="toggleMute('meu-audio')">MUTE-DICE</button>
+                  <button class="mute-button" onclick="toggleMute('owlsound')">MUTE-OWL</button> 
+            </div>
+            <!-- GRID RIGHT -->
+            <div class="col-md-3 col-sm-4 h-100 px-0">
+                
+                <textarea id ="chat-textarea" placeholder="Chat com o mestre e seus colegas de aventuras!!!" rows="14" style="width: 100%;"></textarea>
+                <form id="message-form" class="message-form">
+                    <input type="text" id="message-input" placeholder="Digite sua mensagem..." style="width: 80%;"> 
+                    <img  src="./image/owlbuttom2.png" class="img-fluid" id="owl"></img>
+                    <audio id="owlsound">
+                        <source src="./image/owl.mp3" type="audio/mpeg">
+                        Seu navegador não suporta a reprodução de áudio.
+                    </audio>                   
+                </form>                
+            </div>
+        </div>
+    </div>    
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="./scripts/mestreJS.js"></script>   
+</body>
+</html>
+
+
