@@ -6,30 +6,36 @@
 
 /*HEADER*/
 .header {
-	position: fixed;
-    top: 0;
-    left: 0;
     width: 100%;
-    background-color: #f59797;
+    
+}
+
+.nav {
+    max-width: 1280px;
+    height: 70px;
+    margin-inline: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.logo {
+    font-size: 2rem;
     color: #fff;
-    padding: 2%;
-    z-index: 1000; 
 }
 
-nav {
-  padding: 0 30px;
-  position: fixed;
+.nav-list {
+    padding-top: 1rem;
+    display: flex;
+    gap: 32px;
+    list-style: none;
 }
 
-.navbar-brand {
-  font-size: 2rem;
-  margin: 0 0 1rem;
-  font-weight: 500;
-}
-
-.navbar-nav a {
-  margin: 0 20px;
-  font-size: 1.3rem;
+.nav-list a {
+    font-size: 2rem;
+    color: #fff;
+    padding-block: 16px;
 }
 
 .nav-list a:hover {
@@ -38,8 +44,8 @@ nav {
 /*HEADER*/
 .content {
 	color: blanchedalmond;
+	padding-top: 15vh;
 	margin-top: 1vh;
-	padding: 10vw;
 	box-sizing: ;
 	display: flex;
 	flex-direction: column;
@@ -52,6 +58,8 @@ nav {
   
 .content p {
 	margin-top: 2%;
+	padding-left: 5vw;
+	padding-right: 5vw;
 	font-size: 2rem;
 	line-height: 1.25;
 	text-align: center;
@@ -137,6 +145,7 @@ font-size: 16px;
 body {
 	margin: 0;
 	padding: 0;
+	background-image: url(/static/img/black_background_1920x1080.png);
 	--color-text: #a5a5a5;
 	--color-bg: #000000;
 	--color-link: #d6af7c;
@@ -250,7 +259,7 @@ a:focus-visible {
 }
 
 .frame {
-	padding: 3rem 5vw;
+	
 	text-align: center;
 	position: relative;
 	font-weight: 500;
