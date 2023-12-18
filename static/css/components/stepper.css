@@ -24,7 +24,7 @@ ol.stepper li {
   display: grid;
   place-items: center;
   gap: 5px;
-  font-family: sans-serif;
+
   position: relative;
 }
 ol.stepper li::before {
@@ -39,7 +39,6 @@ ol.stepper li::before {
   background: var(--active-b);
   color: var(--active-c);
   border-radius: 50%;
-  font-family: monospace;
   z-index: 1;
 }
 ol.stepper li.active ~ li::before{
