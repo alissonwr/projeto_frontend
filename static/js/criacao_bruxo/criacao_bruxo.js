@@ -2,6 +2,8 @@ import nome from "./nome.js"
 import varinha from "./varinha.js"
 import aparencia from "./aparencia.js"
 import casa from "./casa.js"
+import ascendencia from "./ascendencia.js"
+import materia from "./materia.js"
 
 //MENU HAMBURGUER//
 const hamburguer = document.querySelector(".hamburguer");
@@ -16,7 +18,7 @@ hamburguer.addEventListener("click", () => {
 const main = document.querySelector("#root")
 const stepper = document.querySelector("ol.stepper");
 
-const stepsOrder = ["#nome", "#aparencia", "#varinha", "#casa"]
+const stepsOrder = ["#nome", "#aparencia", "#varinha", "#ascendencia", "#materia", "#casa"]
 
 const getNext = (hash) => {
     if(stepsOrder.includes(hash)){
@@ -34,13 +36,6 @@ const getPrevious = (hash) => {
         return stepsOrder[previous];
     } 
     return hash;
-}
-
-const setSugestionsButton = () => {
-    const btn = main.querySelector(".sugestions-btn");
-    btn.addEventListener("click", () => {
-
-    })
 }
 
 const init = () => {
@@ -63,7 +58,6 @@ const init = () => {
                 item = stepper.querySelector(".stepper-item.nome")
                 previousBtn.setAttribute("href", getPrevious(window.location.hash))
                 nextBtn.setAttribute("href", getNext(window.location.hash))
-                
                 break;
             case "#aparencia":
                 main.appendChild(aparencia());
@@ -74,6 +68,18 @@ const init = () => {
             case "#varinha":
                 main.appendChild(varinha());
                 item = stepper.querySelector(".stepper-item.varinha")
+                previousBtn.setAttribute("href", getPrevious(window.location.hash))
+                nextBtn.setAttribute("href", getNext(window.location.hash))
+                break;
+            case "#materia":
+                main.appendChild(materia());
+                item = stepper.querySelector(".stepper-item.materia")
+                previousBtn.setAttribute("href", getPrevious(window.location.hash))
+                nextBtn.setAttribute("href", getNext(window.location.hash))
+                break;
+            case "#ascendencia":
+                main.appendChild(ascendencia());
+                item = stepper.querySelector(".stepper-item.ascendencia")
                 previousBtn.setAttribute("href", getPrevious(window.location.hash))
                 nextBtn.setAttribute("href", getNext(window.location.hash))
                 break;

@@ -35,22 +35,23 @@
 <body>
         <header>
             <nav class="nav">
-              <a href="#" class="logo">Harry Potter</a>
-              <button class="hamburguer"></button>
-              <ul class="nav-list">
-                  <li><a href="#">Sobre</a></li>
-                  <li><a href="#">Fichas</a></li>
-                  <li><a href="#">Mesa</a></li>
-                  <li><a href="/login.html">Login</a></li>
-              </ul>
-          </nav>
+                <a href={{'inicio'}} class="logo">Harry Potter</a>
+                <button class="hamburguer"></button>
+                <ul class="nav-list">
+                    <li><a href={{'sobre'}}>Sobre</a></li>
+                    <li><a href={{'fichaBruxo'}}>Fichas</a></li>
+                    <li><a href={{'mesaMestre'}}>Mesa</a></li>
+                    <li><a href={{'login'}}>Login</a></li>
+                </ul>
+            </nav>
           
-          <div class="container">
+            <div class="container">
               <ol class="stepper">
                   <li class="stepper-item nome active"><a>Nome</a></li>
                   <li class="stepper-item aparencia"><a>Aparencia</a></li>
                   <li class="stepper-item varinha"><a>Varinha</a></li>
                   <li class="stepper-item ascendencia"><a>Ascendência</a></li>
+                  <li class="stepper-item materia"><a>Matéria</a></li>
                   <li class="stepper-item casa">Casa</li>
               </ol>
           </div>
