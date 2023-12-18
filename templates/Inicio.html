@@ -5,84 +5,67 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href={{url_for('static', filename='css/inicio.css')}}>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
 
-    <link rel="stylesheet" href="styles/slide.css">
-    <link rel="stylesheet" href="scripts/slide.js">
-
-    <script src="https://kit.fontawesome.com/a2dd6045c4.js" crossorigin="anonymous"></script>
-    <script src="scripts/slide.js" defer></script>
-    <title>Harry Potter</title>
-
-    <link href="https://fonts.cdnfonts.com/css/harry-potter" rel="stylesheet">
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <title>Página inicial</title>
 </head>
 
 <body>
-    <header>
-
-            <nav class="navbar navbar-expand-lg navbar-dark bg-transparent fixed-top">
-                <div class="container-fluid">
-                    <a class="navbar-brand" href="#">Harry Potter</a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
-                        <div class="navbar-nav">
-                            <a class="nav-link active" aria-current="page" href="#">Início</a>
-                            <a class="nav-link text-white" href="#">Sobre</a>
-                            <a class="nav-link text-white" href="#">Mesa</a>
-                            <a class="nav-link text-white" href="#">Personagens</a>
-                            <a class="btn btn-primary btn-lg text-white" href="#">Login</a>
-                        </div>
-                    </div>
-                </div>
-            </nav>
-
+    <header class="header">
+        <nav class="nav">
+            <a href={{'/'}} class="logo">Harry Potter</a>
+            <button class="hamburguer"></button>
+            <ul class="nav-list">
+                <li><a href={{'sobre'}}>Sobre</a></li>
+                <li><a href={{'fichaBruxo'}}>Fichas</a></li>
+                <li><a href={{'mesaMestre'}}>Mesa</a></li>
+                <li><a href={{'login'}}>Login</a></li>
+            </ul>
+        </nav>
     </header>
-
-    <section class="slider">
-        <div class="slider-content">
-
-            <input type="radio" name="btn-radio" id="radio1">
-            <input type="radio" name="btn-radio" id="radio2">
-            <input type="radio" name="btn-radio" id="radio3">
-            <input type="radio" name="btn-radio" id="radio4">
-
-            <div class="slide-box primeiro">
-                <img src="Image/Slide1.jpg" alt="Personagens do Harry Potter">
+    <div class="slider">
+        <div class="slide active">
+            <img src={{url_for('static', filename='img/slide1.jpg')}}>
+            <div class="info">
+                <h2>Conheça os Personagens</h2>
+                <p>Explore um universo rico e diversificado, onde cada personagem possui uma história única e habilidades especiais. Descubra suas origens, motivações e forje laços poderosos enquanto enfrenta desafios épicos. Cada escolha molda o destino dos personagens, tornando sua jornada verdadeiramente cativante.</p>
             </div>
-
-            <div class="slide-box">
-                <img src="Image/Slide2.jpg" alt="Harry Potter">
-            </div>
-
-            <div class="slide-box">
-                <img src="Image/Slide3.jpg" alt="Hogwarts">
-            </div>
-
-            <div class="slide-box">
-                <img src="Image/Slide4.jpg" alt="Magia e Hogwarts">
-            </div>
-
-            <div class="nav-auto">
-                <div class="auto-btn1"></div>
-                <div class="auto-btn2"></div>
-                <div class="auto-btn3"></div>
-                <div class="auto-btn4"></div>
-            </div>
-
-            <div class="nav-manual">
-                <label for="radio1" class="manual-btn"></label>
-                <label for="radio2" class="manual-btn"></label>
-                <label for="radio3" class="manual-btn"></label>
-                <label for="radio4" class="manual-btn"></label>
-            </div>
-
-
         </div>
-
-    </section>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+        <div class="slide">
+            <img src={{url_for('static', filename='img/slide2.jpg')}}>
+            <div class="info">
+                <h2>Descubra as Magias Místicas</h2>
+                <p>Mergulhe no fascinante mundo das magias e feitiços. Aprenda a dominar poderes arcanos e descubra combinações únicas para derrotar inimigos formidáveis. Desvende segredos antigos e aprimore suas habilidades mágicas para se tornar um verdadeiro mestre das artes místicas.</p>
+            </div>
+        </div>
+        <div class="slide">
+            <img src={{url_for('static', filename='img/slide3.jpg')}}>
+            <div class="info">
+                <h2>Explore os Armamentos Lendários</h2>
+                <p>Equipamentos são a chave para a vitória! Conheça uma vasta gama de armamentos lendários, desde espadas mágicas a arcos élficos. Personalize seu arsenal, aprimore suas armas e crie estratégias únicas para cada batalha. A escolha dos armamentos certos pode ser a diferença entre a derrota e a glória.</p>
+            </div>
+        </div>
+        <div class="slide">
+            <img src={{url_for('static', filename='img/slide4.jpg')}}>
+            <div class="info">
+                <h2>Aventure-se no Ambiente Deslumbrante</h2>
+                <p>Viaje por terras magníficas e ambientes deslumbrantes, repletos de mistérios e desafios. Descubra regiões exuberantes, dungeons sombrias e cidades movimentadas. Cada localidade possui sua própria atmosfera e segredos, criando um mundo dinâmico e imersivo que aguarda para ser explorado. Prepare-se para se perder na beleza e complexidade do ambiente do jogo.</p>
+            </div>
+        </div>
+        <div class="navigation">
+            <i class="fas fa-chevron-left prev-btn"></i>
+            <i class="fas fa-chevron-right next-btn"></i>
+        </div>
+        <div class="navigation-visibility">
+            <div class="slide-icon active"></div>
+            <div class="slide-icon"></div>
+            <div class="slide-icon"></div>
+            <div class="slide-icon"></div>
+        </div>
+    </div>
+    <script src={{url_for('static', filename='js/inicio.js')}} defer></script>
 </body>
+
 </html>

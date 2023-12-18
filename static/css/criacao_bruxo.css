@@ -1,0 +1,86 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Modern Antiqua', serif;
+    font-size: 1.04em;
+
+}
+
+.box {
+    position: relative;
+    width: 400px;
+    height: 440px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .5);
+    border-radius: 20
+}
+
+body {
+    color: white;
+    background-image: url("../img/background1.jpg");
+}
+
+h3 {
+    font-size: 2.5em;
+    font-weight: bold;
+    color:#D9A404;
+}
+
+h5 {
+    color:#D9A404;
+    text-align: center;
+}
+
+.fullwidth {
+    width: 100% !important; 
+}
+
+.col {
+    margin: 10px;
+}
+
+select{
+    text-align: center;
+    background-color: transparent;
+    color: white;
+    border: 1px solid #D9A404;
+}
+
+input{
+    background-color: transparent;
+    color:  #D9A404;
+    font-weight: bold;
+    font-size: 1.5em;
+    border: 1px solid white;
+    border-radius: 5px;
+    box-shadow: none;
+    text-align: center;
+}
+
+option{
+    color: black;
+}
+
+main {
+    min-height: 70vh;
+}
+
+.hidden {
+    display: none;
+}   
+
+.bg-card {
+    background-color: rgb(0, 0, 0, .9);
+    padding: 50px;
+    border-radius: 10px;
+    border: 1px solid #D9A404;
+}
+
+.sugestions-btn{
+    margin-top:20px;
+    border: 1px solid #D9A404;
+    color: #D9A404;
+}
+
+span {
+    color: #004586;
+}

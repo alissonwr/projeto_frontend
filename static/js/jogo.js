@@ -1,5 +1,5 @@
 const harry = document.querySelector('.harry');
-const pipe = document.querySelector('.pipe')
+const pipe = document.querySelector('.pipe');
 
 const jump = () => {
     harry.classList.add('jump');

@@ -70,6 +70,7 @@ a {
 }
 
 .nav-list {
+    padding-top: 1rem;
     display: flex;
     gap: 32px;
     list-style: none;
@@ -79,6 +80,10 @@ a {
     font-size: 2rem;
     color: #fff;
     padding-block: 16px;
+}
+
+.nav-list a:hover {
+    color: #ffffffcc;
 }
 
 main {
@@ -246,6 +251,11 @@ main {
     font-size: 1em;
     font-weight: bold;
     background-color: #04046c;
+    color: #F1EFEF;
+}
+
+.btn:hover {
+    background-color: #0c0ca5;
     color: #F1EFEF;
 }
 
