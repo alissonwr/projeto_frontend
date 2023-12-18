@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect, url_for, flash
+from flask import Flask, render_template, jsonify, request, redirect, url_for, flash
 import repositorio
 
 app = Flask(__name__)
@@ -6,7 +6,11 @@ app.secret_key = 'sua_chave_secreta_aqui'
 
 @app.route("/")
 def retorna_inicio():
-    return render_template('index.html')
+    return render_template('inicio.html')
+
+@app.route("/api")
+def retorna_api():
+    return render_template('api.html')
 
 @app.route("/login")
 def retorna_login():
@@ -31,6 +35,19 @@ def retorna_cadastro():
     
     return render_template('cadastro.html')
  
+@app.route("/usuarios", methods=["GET"])
+def get_usuarios():
+    lista_usuarios = repositorio.retornar_usuarios()
+    return jsonify(lista_usuarios)
+
+@app.route("/usuarios/<int:id>", methods=["GET"])
+def get_usuario(id):
+    usuario = repositorio.retornar_usuario(id)
+    
+    if usuario:
+        return jsonify(usuario)
+    else:
+        return jsonify({"message": "Usuário não encontrado!"}), 404
 
 @app.route("/jogo")
 def retorna_jogo():

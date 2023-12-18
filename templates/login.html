@@ -1,45 +1,66 @@
 <!DOCTYPE html>
 <html lang="pt">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href={{url_for('static', filename='css/login.css')}}>
+    <link rel="stylesheet" href={{url_for('static', filename='css/login.css' )}}>
 
     <script src="https://kit.fontawesome.com/a2dd6045c4.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <title>Login</title>
 </head>
+
 <body>
-    <div class="box">
-        <div class="content-form login">
-            <h2>Login</h2>
-            <form action="#">
-                
-                <div class="content-input">
-                    <span class="icon"><i class="fa-solid fa-envelope"></i></span>
-                    <input type="email" required>
-                    <label for="#">Email</label>
-                </div>
+    <header class="header">
+        <nav class="nav">
+            <a href={{'inicio'}} class="logo">Harry Potter</a>
+            <button class="hamburguer"></button>
+            <ul class="nav-list">
+                <li><a href={{'sobre'}}>Sobre</a></li>
+                <li><a href={{'fichaBruxo'}}>Fichas</a></li>
+                <li><a href={{'mesaMestre'}}>Mesa</a></li>
+                <li><a href={{'login'}}>Login</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="hero">
+        <div class="box">
+            <div class="content-form login">
+                <h2>Login</h2>
+                <form action="#">
 
-                <div class="content-input">
-                    <span class="icon"><i class="fa-solid fa-lock"></i></span>
-                    <input type="password" required>
-                    <label for="#">Senha</label>
-                </div>
+                    <div class="content-input">
+                        <span class="icon"><i class="fa-solid fa-envelope"></i></span>
+                        <input type="email" id="email" name="email" required>
+                        <label for="email">Email</label>
+                    </div>
 
-                <div class="lembrar">
-                    <label for="#"><input type="checkbox">Lembrar Sessão</label>
-                    <a href="#">Esqueceu a Senha?</a>
-                </div>
+                    <div class="content-input">
+                        <span class="icon"><i class="fa-solid fa-lock"></i></span>
+                        <input type="password" id="senha" name="senha" required>
+                        <label for="senha">Senha</label>
+                    </div>
 
-                <button type="submit" class="btn"><a href="jogo.html">Iniciar Sessão</a></button>
+                    <div class="lembrar">
+                        <label for="#"><input type="checkbox">Lembrar Sessão</label>
+                        <a href="#">Esqueceu a Senha?</a>
+                    </div>
 
-                <div class="registrar">
-                    <p>Não tem uma conta? <a href="/templates/cadastro.html" class="registrar-link">Registrar-se</a></p>
-                </div>
-                                              
-            </form>
+                    <button type="submit" class="btn"><a href="#">Iniciar Sessão</a></button>
+
+                    <div class="registrar">
+                        <p>Não tem uma conta? <a href={{'cadastro'}} class="registrar-link">Registrar-se</a>
+                        </p>
+                    </div>
+
+                </form>
+            </div>
         </div>
-    </div>
+    </main>
+    <script src={{url_for('static', filename='js/login.js' )}}></script>
+    <script src={{url_for('static', filename='js/api.js' )}} ></script>
 </body>
+
 </html>
