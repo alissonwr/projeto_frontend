@@ -1,8 +1,38 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" class="no-js">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Circular Text Effect | Demo 2 | Codrops</title>
+    <link rel="shortcut icon" href="favicon.26242483.ico" />
+
+    <link rel="stylesheet" type="text/css" href="/styles/sobre_rpg.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+    <script>
+      document.documentElement.className = "js";
+
+      var supportsCssVars = function supportsCssVars() {
+        var e,
+          t = document.createElement("style");
+        return (
+          (t.innerHTML = "root: { --tmp-var: bold; }"),
+          document.head.appendChild(t),
+          (e = !!(
+            window.CSS &&
+            window.CSS.supports &&
+            window.CSS.supports("font-weight", "var(--tmp-var)")
+          )),
+          t.parentNode.removeChild(t),
+          e
+        );
+      };
+
+      supportsCssVars() ||
+        alert(
+          "Please view this demo in a modern browser that supports CSS Variables."
+        );
+    </script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -22,6 +52,7 @@
       href="/assets/images/logo_fav_icon.png"
       type="image/x-icon"
     />
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
   </head>
 
@@ -53,7 +84,7 @@
             aria-label=""
             textLength="2830"
           >
-            And now this tree of ours may grow tall in the woods&nbsp;
+          Não são as nossas habilidades que s&nbsp;
           </textPath>
         </text>
         <text class="circles__text circles__text--2">
@@ -63,7 +94,7 @@
             aria-label=""
             textLength="2001"
           >
-            Depth over distance every time&nbsp;
+          revelam quem realmente somos&nbsp;
           </textPath>
         </text>
         <text class="circles__text circles__text--3">
@@ -73,7 +104,7 @@
             aria-label=""
             textLength="1341"
           >
-            But it's the roots that will bind us here&nbsp;
+          São as nossas escolhas&nbsp;
           </textPath>
         </text>
         <text class="circles__text circles__text--4">
@@ -83,50 +114,32 @@
             aria-label=""
             textLength="836"
           >
-            Depth over distance was all I asked of you&nbsp;
+          Wingardium Leviosa&nbsp;
           </textPath>
         </text>
       </svg>
+      <div class="frame">
+        <header class="header">
+          <nav class="nav">
+              <a href={{'/'}} class="logo">Harry Potter</a>
+              <button class="hamburguer"></button>
+              <ul class="nav-list">
+                  <li><a href={{'sobre'}}>Sobre</a></li>
+                  <li><a href={{'fichaBruxo'}}>Fichas</a></li>
+                  <li><a href={{'mesaMestre'}}>Mesa</a></li>
+                  <li><a href={{'login'}}>Login</a></li>
+              </ul>
+          </nav>
+      </header>
+        <div class="content">
+          <h1>HOGWARTS - ROLE PLAYING GAME</h1>
+          <h2>SOBRE O JOGO</h2>
+          <p>
+            Hogwarts - RPG é um jogo interativo de mundo aberto, onde o céu é o
+            limite, ou não... Junte a galera e venha se divertir e soltar sua
+            imaginação no mundo de magias e aventuras fantasiosas!
+          </p>
 
-      <nav class="navbar navbar-expand-lg navbar-dark bg-transparent fixed-top">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">Harry Potter</a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNavAltMarkup"
-            aria-controls="navbarNavAltMarkup"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div
-            class="collapse navbar-collapse justify-content-end"
-            id="navbarNavAltMarkup"
-          >
-            <div class="navbar-nav">
-              <a class="nav-link active" aria-current="page" href="#">Início</a>
-              <a class="nav-link text-white" href="#">Sobre</a>
-              <a class="nav-link text-white" href="#">Mesa</a>
-              <a class="nav-link text-white" href="#">Personagens</a>
-              <a class="btn btn-primary btn-lg text-white" href="#">Login</a>
-            </div>
-          </div>
-        </div>
-      </nav>
-
-      <div class="content">
-        <h1>HOGWARTS - ROLE PLAYING GAME</h1>
-        <h2>SOBRE O JOGO</h2>
-        <p>
-          Hogwarts - RPG é um jogo interativo de mundo aberto, onde o céu é o
-          limite, ou não... Junte a galera e venha se divertir e soltar sua
-          imaginação no mundo de magias e aventuras fantasiosas!
-        </p>
-
-        <div class="como_jogar">
           <div class="btn_display">
             <button
               class="btn_body"
@@ -274,121 +287,118 @@
             resultado depende dos protagonistas e dos dados.
             <br />
           </div>
+
+          <div
+            class="textoApareceAposClicarBotao"
+            id="inCriacao"
+            style="display: none"
+          >
+            <h2>CRIE OS PERSONAGENS</h2>
+
+            Agora é a hora de criar os protagonistas! Os jogadores devem
+            preencher o formulário na seção "CRIE SEU BRUXO". <br />
+            Em HOGWARTS - ROLE PLAYING GAME você poderá personalizar e estilizar
+            a aparência de seu personagem, escolher sua varinha, ambição, se
+            será nascido bruxo ou trouxa, matéria favorita da escola de magia e
+            até o seu animal místico familiar. <br />
+            Lembre-se: O narrador deve estar preparado para responder quaisquer
+            dúvidas que os jogadores possam ter.
+          </div>
+
+          <div
+            class="textoApareceAposClicarBotao"
+            id="inPerguntas"
+            style="display: none"
+          >
+            <h2>PERGUNTAS FREQUENTES</h2>
+
+            <h3>E SE...</h3>
+
+            <h4>1 - Alguém está falando muito ou está falando pouco?</h4>
+
+            Geralmente, você consegue consertar isso fazendo perguntas aos
+            jogadores calados. Perguntas do tipo "Como você se sente sobre
+            isto?" ou "O que você quer fazer agora?" são sempre boas.
+            Certifique-se de usar o nome do bruxo!
+            <br />
+            Tenha em mente que, às vezes, jogadores calados ficam felizes em se
+            sentar e assistir à história. Não os force a participar, apenas
+            ofereça a chance de fazê-lo.<br />
+            Se for você que estiver falando demais, faça mais perguntas a todos.
+            Você pode perguntar coisas como "Qual a aparência dessa sala?" ou "O
+            que o fantasma fará agora?” O seu trabalho é descrever o mundo, mas
+            não faz mal compartilhar isso com os jogadores de vez em quando.
+
+            <h4>2 - Todos estão olhando pra mim, mas não sei o que dizer?</h4>
+
+            Não entre em pânico! Agora é um bom momento para fazer um Movimento
+            do Narrador. Introduza algo novo na história, como um novo aluno ou
+            uma sala desconhecida. Faça acontecer algo inesperado. Ou, faça uma
+            pergunta. Então veja como os protagonistas reagem. <br />
+            Se a história realmente te pegar de surpresa, não faz mal dizer, "eu
+            realmente não tenho certeza do que acontece a seguir!” Você pode
+            então fazer uma pequena pausa para descobrir. <br />
+            Você também pode perguntar aos jogadores o que eles acham que deve
+            acontecer. Lembre-se, essa é uma história colaborativa!
+
+            <h4>3 - Não tivermos resolvido todos os Mistérios?</h4>
+
+            Você pode terminar sua história sem responder todas as perguntas dos
+            Mistérios. Se os jogadores parecerem felizes com o modo como a
+            história acabou, não precisa se preocupar com as perguntas sem
+            resposta.<br />
+            No entanto, se eles apontarem que vários Mistérios ainda não foram
+            resolvidos, sua história pode não ter acabado ainda! Talvez você
+            queira jogar mais um pouco. Ou, se estiver sem tempo no momento,
+            você pode marcar outra sessão da história.<br />
+            Caso não possa fazer qualquer um dos dois, você pode perguntar aos
+            jogadores, "quais vocês acham que são as respostas para essas
+            perguntas"? Então tente falar rapidamente sobre algumas soluções
+            para os Mistérios não resolvidos.
+
+            <h4>4 - Não soubermos o que certo feitiço faz?</h4>
+
+            A seção de "FEITIÇOS" só inclui os nomes dos feitiços e
+            encantamentos. Isto é proposital. Quando alguém lança um feitiço,
+            eles podem descrever o seu efeito. Desde que esse efeito se encaixe
+            no nome do feitiço e pareça justo para todos, vá em frente. <br />
+            A seção de "FEITIÇOS" tem algumas sugestões sobre como alguns tipos
+            de feitiços podem causar ou prevenir Condições. No entanto, a
+            maioria dos feitiços faz algo apenas na história, como fazer as
+            coisas levitarem ou causar soluços em alguém. <br />
+            Lembre-se, para lançar um feitiço, um bruxo deve dizer corretamente
+            o encantamento e agitar sua varinha!
+
+            <h4>5 - O meu grupo não quiser usar todas as regras?</h4>
+
+            Não há problema! Você pode usar tantas regras quanto quiser. Se o
+            seu grupo quiser jogar um jogo sem Condições, não dê nenhuma
+            Condição à ninguém. Se não quiser escrever e riscar Mistérios, não
+            pergunte sobre Mistérios. Fique à vontade!
+
+            <h4>
+              6 - Eu não souber nada sobre Harry Potter, ou alguém souber mais
+              do que eu?
+            </h4>
+
+            Tudo bem. Essa é a história do seu grupo, e de mais ninguém. Não tem
+            problema adaptar as coisas para caber em sua história. Você não
+            precisa seguir os livros e filmes à perfeição. <br />
+            Se alguém lhe corrigir em algo sobre o mundo, use isso, mas só se
+            fizer sentido para sua história! Se alguém está atrapalhando a
+            história corrigindo as pessoas o tempo todo, lembre-o gentilmente de
+            que vocês estão criando uma história original. Até os filmes mudaram
+            ou omitiram coisas dos livros, e eles ainda são ótimos!<br />
+            Se você realmente precisa saber alguma coisa, você sempre pode dar
+            uma pausa na história por alguns segundos e procurar online!
+          </div>
         </div>
-
-        <div
-          class="textoApareceAposClicarBotao"
-          id="inCriacao"
-          style="display: none"
-        >
-          <h2>CRIE OS PERSONAGENS</h2>
-
-          Agora é a hora de criar os protagonistas! Os jogadores devem preencher
-          o formulário na seção "CRIE SEU BRUXO". <br />
-          Em HOGWARTS - ROLE PLAYING GAME você poderá personalizar e estilizar a
-          aparência de seu personagem, escolher sua varinha, ambição, se será
-          nascido bruxo ou trouxa, matéria favorita da escola de magia e até o
-          seu animal místico familiar. <br />
-          Lembre-se: O narrador deve estar preparado para responder quaisquer
-          dúvidas que os jogadores possam ter.
-        </div>
-
-        <div
-          class="textoApareceAposClicarBotao"
-          id="inPerguntas"
-          style="display: none"
-        >
-          <h2>PERGUNTAS FREQUENTES</h2>
-
-          <h3>E SE...</h3>
-
-          <h4>1 - Alguém está falando muito ou está falando pouco?</h4>
-
-          Geralmente, você consegue consertar isso fazendo perguntas aos
-          jogadores calados. Perguntas do tipo "Como você se sente sobre isto?"
-          ou "O que você quer fazer agora?" são sempre boas. Certifique-se de
-          usar o nome do bruxo!
-          <br />
-          Tenha em mente que, às vezes, jogadores calados ficam felizes em se
-          sentar e assistir à história. Não os force a participar, apenas
-          ofereça a chance de fazê-lo.<br />
-          Se for você que estiver falando demais, faça mais perguntas a todos.
-          Você pode perguntar coisas como "Qual a aparência dessa sala?" ou "O
-          que o fantasma fará agora?” O seu trabalho é descrever o mundo, mas
-          não faz mal compartilhar isso com os jogadores de vez em quando.
-
-          <h4>2 - Todos estão olhando pra mim, mas não sei o que dizer?</h4>
-
-          Não entre em pânico! Agora é um bom momento para fazer um Movimento do
-          Narrador. Introduza algo novo na história, como um novo aluno ou uma
-          sala desconhecida. Faça acontecer algo inesperado. Ou, faça uma
-          pergunta. Então veja como os protagonistas reagem. <br />
-          Se a história realmente te pegar de surpresa, não faz mal dizer, "eu
-          realmente não tenho certeza do que acontece a seguir!” Você pode então
-          fazer uma pequena pausa para descobrir. <br />
-          Você também pode perguntar aos jogadores o que eles acham que deve
-          acontecer. Lembre-se, essa é uma história colaborativa!
-
-          <h4>3 - Não tivermos resolvido todos os Mistérios?</h4>
-
-          Você pode terminar sua história sem responder todas as perguntas dos
-          Mistérios. Se os jogadores parecerem felizes com o modo como a
-          história acabou, não precisa se preocupar com as perguntas sem
-          resposta.<br />
-          No entanto, se eles apontarem que vários Mistérios ainda não foram
-          resolvidos, sua história pode não ter acabado ainda! Talvez você
-          queira jogar mais um pouco. Ou, se estiver sem tempo no momento, você
-          pode marcar outra sessão da história.<br />
-          Caso não possa fazer qualquer um dos dois, você pode perguntar aos
-          jogadores, "quais vocês acham que são as respostas para essas
-          perguntas"? Então tente falar rapidamente sobre algumas soluções para
-          os Mistérios não resolvidos.
-
-          <h4>4 - Não soubermos o que certo feitiço faz?</h4>
-
-          A seção de "FEITIÇOS" só inclui os nomes dos feitiços e encantamentos.
-          Isto é proposital. Quando alguém lança um feitiço, eles podem
-          descrever o seu efeito. Desde que esse efeito se encaixe no nome do
-          feitiço e pareça justo para todos, vá em frente. <br />
-          A seção de "FEITIÇOS" tem algumas sugestões sobre como alguns tipos de
-          feitiços podem causar ou prevenir Condições. No entanto, a maioria dos
-          feitiços faz algo apenas na história, como fazer as coisas levitarem
-          ou causar soluços em alguém. <br />
-          Lembre-se, para lançar um feitiço, um bruxo deve dizer corretamente o
-          encantamento e agitar sua varinha!
-
-          <h4>5 - O meu grupo não quiser usar todas as regras?</h4>
-
-          Não há problema! Você pode usar tantas regras quanto quiser. Se o seu
-          grupo quiser jogar um jogo sem Condições, não dê nenhuma Condição à
-          ninguém. Se não quiser escrever e riscar Mistérios, não pergunte sobre
-          Mistérios. Fique à vontade!
-
-          <h4>
-            6 - Eu não souber nada sobre Harry Potter, ou alguém souber mais do
-            que eu?
-          </h4>
-
-          Tudo bem. Essa é a história do seu grupo, e de mais ninguém. Não tem
-          problema adaptar as coisas para caber em sua história. Você não
-          precisa seguir os livros e filmes à perfeição. <br />
-          Se alguém lhe corrigir em algo sobre o mundo, use isso, mas só se
-          fizer sentido para sua história! Se alguém está atrapalhando a
-          história corrigindo as pessoas o tempo todo, lembre-o gentilmente de
-          que vocês estão criando uma história original. Até os filmes mudaram
-          ou omitiram coisas dos livros, e eles ainda são ótimos!<br />
-          Se você realmente precisa saber alguma coisa, você sempre pode dar uma
-          pausa na história por alguns segundos e procurar online!
-        </div>
-        
-        <button class="enter">
-          <div class="enter__bg"></div>
-          <span class="enter__text">Entre</span>
-        </button>
-        
       </div>
+      <button class="enter">
+        <div class="enter__bg"></div>
+        <span class="enter__text">Alohomora</span>
+      </button>
     </main>
     <script src="/scripts/sobre_rpg_circleeffect.js"></script>
-    <script src="/scripts/sobre_rpg.js"></script>
   </body>
 </html>

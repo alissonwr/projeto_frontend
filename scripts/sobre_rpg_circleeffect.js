@@ -5671,7 +5671,9 @@ var Intro = /*#__PURE__*/function () {
       }); // hide on start
 
 
-     
+      _gsap.gsap.set([this.DOM.circleText, DOM.content.children, DOM.frame.children], {
+        opacity: 0
+      }); // don't allow to hover
 
 
       _gsap.gsap.set(DOM.enterCtrl, {
@@ -5834,3 +5836,9 @@ Promise.all([(0, _utils.preloadFonts)('kxo3pgz')]).then(function () {
   intro.start();
 });
 },{"../utils":"MgTz","./intro":"neVR"}]},{},["ZSzT"], null)
+
+function mostrarTextoPor(idTexto) {
+  var areaDeTexto = document.getElementById("areaDeTexto");
+  var texto = document.getElementById(idTexto)
+  areaDeTexto.innerHTML = texto.innerHTML;
+}
