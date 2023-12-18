@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Modern+Antiqua&family=Poppins:wght@600&display=swap');
 
+*{
+  text-decoration: none;
+}
 body {
   margin: 0;
   align-items: center;
@@ -7,37 +10,121 @@ body {
   height: 100vh;
   width: 100vw;
   padding: 0;
+  
+  overflow: hidden;
+  height: 100vh;
 }
 .background-image {
-  background-image: url(../image/tb2.jpeg);
+  background-image: url(../img/tb2.jpeg);
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
   background-repeat: no-repeat;
   max-width: fit-content;
-}
-
-header {
-  width: 100%;
-  box-sizing: border-box;
-}
-.container-fluid{
-  padding-left: 3vw;
-  padding-right: 3vw;
-}
-header img {
-  width: 100vw;
-  height:fit-content;
-  display: flex;
-  opacity: 0.4;
-  min-width: 150px;
   
 }
 
-header img:hover{
-  opacity: 1;
+#magic{
+  margin-top: 4%;
+  margin-left: 20%;
+  color: rgb(0, 0, 0);
+  /*-webkit-text-stroke: 1px rgb(255, 255, 255);*/
+  text-shadow: -1px -1px 0 #ffffff, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  font-size: x-large;
+  
 }
 
+#descricao-magia{
+  color: white; /* Cor do texto */
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+
+select {
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+option {
+  background-color: #f9f9f9;
+  color: #333;
+}
+select:focus {
+  outline: none;
+  border-color: #66afe9;
+  box-shadow: 0 0 5px rgba(102, 175, 233, 0.6);
+}
+/*Header novo*/
+.main-active{
+  opacity: 0;
+  transition-delay: 0s;
+
+}
+
+.container-fluid{
+  padding-left: 3vw;
+  padding-right: 3vw;
+  transition-delay: 700ms;  
+}
+
+.header {
+  width: 100%;
+  padding-inline: 16px;
+}
+
+.nav {
+  max-width: 1280px;
+  height: 70px;
+  margin-inline: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+
+.logo {
+  font-size: 2rem;
+  color: #fff;
+}
+
+.nav-list {
+  display: flex;
+  gap: 32px;
+  list-style: none;
+  padding-top: 1rem;
+}
+
+.nav-list a {
+  font-size: 2rem;
+  color: #fff;
+  padding-block: 16px;
+}
+.nav-list a:hover {
+  color: #ffffffcc;
+}
+.hamburguer {
+  display: none;
+  border: none;
+  background: none;
+  border-top: 3px solid #fff;
+  cursor: pointer;
+}
+
+.hamburguer::before,
+.hamburguer::after {
+  content: " ";
+  display: block;
+  width: 30px;
+  height: 3px;
+  background: #fff;
+  margin-top: 5px;
+  position: relative;
+  transition: 0.3s;
+}
+
+
+/*Fim header novo*/
 .col-md-3,
 .col-md-6{
   padding: 0;  
@@ -72,7 +159,7 @@ header img:hover{
 
 .number-overlay {
   position: absolute;
-  top: 63%;
+  top: 32%;
   left: 11%;
   transform: translate(-50%, -50%);
   z-index: 1;
@@ -119,7 +206,7 @@ textarea{
 #username-form {
   opacity: 0.7; 
   margin-left: 20%;
-  margin-top: 10%;
+  margin-top: 30%;
   width: 45vh;
   height: 10%;
   border-radius: 5px;
@@ -131,8 +218,14 @@ textarea{
   
 
 .col-md-6 .mute-button {
-  margin-top: 380px; 
-  margin-left: 100px; 
+  position:fixed;
+  bottom: 20px; 
+  margin-left: 10%;
+}
+.col-md-6 .mute-button2 {
+  position:fixed;
+  bottom: 20px; 
+  margin-left: 25%; 
 }
 
 /*Menu hamburguer*/
@@ -144,192 +237,67 @@ textarea{
   overflow: hidden;
   font-family: 'Modern Antiqua', serif;
 }
+@media (max-width: 750px) {
+  .hamburguer {
+      display: block;
+      z-index: 1;
+  }
 
+  .nav-list {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: #000;
+      clip-path: circle(100px at 90% -30%);
+      transition: 1s ease-out;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      gap: 0;
+      pointer-events: none;
+  }
 
-@media screen and (max-width: 1200px) {
+  .nav-list a {
+      font-size: 24px;
+      opacity: 0;
+  }
+
+  .nav-list li:nth-child(1) a {
+      transition: 0.5s 0.2s;
+  }
+
+  .nav-list li:nth-child(2) a {
+      transition: 0.5s 0.4s;
+  }
+
+  .nav-list li:nth-child(3) a {
+      transition: 0.5s 0.6s;
+  }
   
-  
-  #dice_d20 {
-    width: 40%; 
-    
-    margin-left: 15%; 
-    margin-top: 0%; 
+  .nav.active .nav-list {
+      clip-path: circle(1500px at 90% -30%);
+      pointer-events: all;
   }
 
-  #wandyButtom {
-    width: 7vh;
-    margin-top: 60%;
-    margin-left: -40%;
-    
+  .nav.active .nav-list a {
+      opacity: 1;
   }
 
-  #message-input {
-    
-    width: 90%; 
-    margin-bottom: 10px;
+  .nav.active .hamburguer {
+      position: fixed;
+      top: 26px;
+      right: 16px;
+      border-top-color: transparent;
   }
 
-  #owl {
-    width: 80px; 
-    height: auto;
+  .nav.active .hamburguer::before {
+      transform: rotate(135deg);
   }
 
-  .number-overlay {
-    position: absolute;
-    top: 43%;
-    left: 8%;
-    transform: translate(-10%, -50%);
-    font-size: 2rem;
-    z-index: 1;
-    color: rgb(242, 5, 5); 
-    text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
-  }
-
-  textarea {
-    
-    width: 90%;
-    
-    height: 150px;
-    
-  }
-}
-
-
-@media screen and (max-width: 1024px){
-   
-  
-   #dice_d20 {
-    width: 40%; 
-    
-    margin-left: 15%; 
-    margin-top: 0%; 
-  }
-
-  #wandyButtom {
-    width: 7vh;
-    margin-top: 60%;
-    margin-left: -40%;
-    
-  }
-
-  #message-input {
-    
-    width: 90%; 
-    margin-bottom: 10px;
-  }
-
-  #owl {
-    width: 80px; 
-    height: auto;
-  }
-
-  .number-overlay {
-    position: absolute;
-    top: 38%;
-    left: 8%;
-    transform: translate(-10%, -50%);
-    font-size: 2rem;
-    z-index: 1;
-    color: rgb(242, 5, 5); 
-    text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
-  }
-
-  textarea {
-    
-    width: 90%;
-    
-    height: 150px;
-    
-  }
-}
-
- 
-  
-
-
-@media screen and (max-width: 768px) {
-  
- 
-  #dice_d20 {
-   width: 40%; 
-   
-   margin-left: 15%; 
-   margin-top: 0%; 
- }
-
- #wandyButtom {
-   width: 7vh;
-   margin-top: 60%;
-   margin-left: -40%;
-   
- }
-
- #message-input {
-   
-   width: 90%; 
-   margin-bottom: 10px;
- }
-
- #owl {
-   width: 80px; 
-   height: auto;
- }
-
- .number-overlay {
-   position: absolute;
-   top: 29%;
-   left: 8%;
-   transform: translate(-10%, -50%);
-   font-size: 2rem;
-   z-index: 1;
-   color: rgb(242, 5, 5); 
-   text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
- }
-
- textarea {
-   
-   width: 90%;
-   
-   height: 150px;
-   
- }
-}
-
-
-
-@media screen and (max-width: 426px) {
-  .col-md-3,
-  .col-md-6 {
-    flex-basis: 100%; 
-  }
-
-  #message-input {
-    width: 90%; 
-    margin-bottom: 10px; 
-  }
-
-  #owl {
-    width: 40px; 
-    height: auto;
-  }
-  #dice_d20 {
-    width: 15%; 
-    margin-left: 8%; 
-    margin-top: -2%;
-  }
-  .number-overlay {
-    position: absolute;
-    top: 17%;
-    left: 12%;
-    transform: translate(-10%, -50%);
-    font-size: 0.2rem;
-    z-index: 1;
-    color: rgb(242, 5, 5); 
-    text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
-  }
-  #wandyButtom{
-    width: 5vh;
-    margin-left: -18%;
-    margin-top: 20%;    
+  .nav.active .hamburguer::after {
+      transform: rotate(-135deg);
+      top: -7px;
   }
 }
