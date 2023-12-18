@@ -1,0 +1,76 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.game-board {
+    width: 100%;
+    height: 100vh;
+    border-bottom: 15px solid rgb(35, 160, 35);
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(#87CEEB, #E0F6FF);
+}
+
+.pipe {
+    position: absolute;
+    bottom: 0;
+    width: 12rem;
+    height: 15rem;
+    animation: pipe-animation 2s infinite linear;
+}
+
+.harry {
+    width: 8rem;
+    position: absolute;
+    bottom: 0px;    
+}
+
+.jump {
+    animation: jump 500ms ease-out;
+}
+
+.clouds {
+    position: absolute;
+    width: 20rem;
+    animation: clouds-animation 20s infinite linear;
+}
+
+@keyframes pipe-animation {
+    from {
+        right: -150px;
+    }
+
+    to {
+        right: 100%;
+    }
+}
+
+@keyframes jump {
+    0% {
+        bottom: 0;
+    }
+    40% {
+        bottom: 250px;
+    }
+    50% {
+        bottom: 250px;
+    }
+    60% {
+        bottom: 250px;
+    }
+    100% {
+        bottom: 0;
+    }
+}
+
+@keyframes clouds-animation {
+    from {
+        right: -20rem;
+    }
+    to {
+        right: 100%;
+    }
+}

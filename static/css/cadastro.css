@@ -1,0 +1,349 @@
+@import url('https://fonts.googleapis.com/css2?family=Modern+Antiqua&family=Poppins:wght@600&display=swap');
+
+* {
+    font-family: 'Modern Antiqua', serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+
+/* body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 0 30px;
+    background: url('/projeto_frontend/image/wallpapersden.com_harry-potter-magic-awakened-hd-gaming-2022_1920x1080.jpg');
+    background-position: center;
+    background-size: cover;
+} */
+
+/* .navbar {
+    padding: 0 30px;
+}
+
+.navbar-brand {
+    font-size: 2.0rem;
+}
+
+.navbar-nav a {
+    margin: 0 20px;
+    font-size: 1.3rem;
+} */
+
+body {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(-45deg, #678be8, #b7784b, #fdf754);
+    background-position: center;
+    background-size: cover;
+}
+
+a {
+    text-decoration: none;
+}
+
+.header {
+    width: 100%;
+    padding-inline: 16px;
+}
+
+.nav {
+    max-width: 1280px;
+    height: 70px;
+    margin-inline: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.logo {
+    font-size: 2rem;
+    color: #fff;
+}
+
+.nav-list {
+    padding-top: 1rem;
+    display: flex;
+    gap: 32px;
+    list-style: none;
+}
+
+.nav-list a {
+    font-size: 2rem;
+    color: #fff;
+    padding-block: 16px;
+}
+
+.nav-list a:hover {
+    color: #ffffffcc;
+}
+
+main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition-delay: 700ms;
+}
+
+.main-active {
+    opacity: 0;
+    transition-delay: 0s;
+}
+
+.hero {
+    height: calc(100vh - 70px);
+    background: center / cover no-repeat url("");
+}
+
+.hamburguer {
+    display: none;
+    border: none;
+    background: none;
+    border-top: 3px solid #fff;
+    cursor: pointer;
+}
+
+.hamburguer::before,
+.hamburguer::after {
+    content: " ";
+    display: block;
+    width: 30px;
+    height: 3px;
+    background: #fff;
+    margin-top: 5px;
+    position: relative;
+    transition: 0.3s;
+}
+
+.box {
+    position: relative;
+    width: 400px;
+    height: 440px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .5);
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+.box.active {
+    height: 455px;
+}
+
+.box .content-form {
+    width: 100%;
+    padding: 40px;
+}
+
+.box .content-form.login {
+    transition: .17s ease;
+    transform: translateX(0);
+}
+
+.box.active .content-form.login {
+    transition: none;
+    transform: translateX(-400px);
+}
+
+.box.active .content-form.registrar {
+    transition: transform .17s ease;
+    transform: translateX(0);
+}
+
+.content-form h2 {
+    font-size: 2em;
+    color: #3f3e3e;
+    text-align: center;
+}
+
+.content-input {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border-bottom: 2px solid #F1EFEF;
+    margin: 30px 0;
+}
+
+.content-input label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 1em;
+    font-weight: 600;
+    pointer-events: none;
+    transition: .4s;
+    color: #3f3e3e;
+}
+
+.content-input input:focus~label,
+.content-input input:valid~label {
+    top: -6px;
+}
+
+.content-input input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color: #3f3e3e;
+    padding: 0 35px 0 5px;
+}
+
+.content-input .icon {
+    position: absolute;
+    right: 8px;
+    font-size: 1.4em;
+    color: #04046c;
+    line-height: 57px;
+}
+
+.lembrar {
+    font-size: .9em;
+    margin: -15px 0 15px;
+    display: flex;
+    justify-content: space-between;
+    font-weight: 600;
+}
+
+.lembrar label {
+    color: #04046c;
+}
+
+.lembrar label input {
+    accent-color: #05057e;
+    margin-right: 3px;
+}
+
+.lembrar a {
+    color: #3f3e3e;
+    text-decoration: none;
+}
+
+.lembrar a:hover {
+    text-decoration: underline;
+}
+
+.btn {
+    width: 100%;
+    height: 45px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+    background-color: #04046c;
+    color: #F1EFEF;
+}
+
+.btn:hover {
+    background-color: #0c0ca5;
+    color: #F1EFEF;
+}
+
+.registrar {
+    font-size: .9em;
+    color: #3f3e3e;
+    text-align: center;
+    margin: 25px 0 10px;
+}
+
+.registrar p a {
+    color: #3f3e3e;
+    text-decoration: none;
+}
+
+.registrar p a:hover {
+    text-decoration: underline;
+}
+
+
+@media (max-width: 750px) {
+    .hamburguer {
+        display: block;
+        z-index: 1;
+    }
+
+    .nav-list {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: #000;
+        clip-path: circle(100px at 90% -30%);
+        transition: 1s ease-out;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        gap: 0;
+        pointer-events: none;
+    }
+
+    .nav-list a {
+        font-size: 24px;
+        opacity: 0;
+    }
+
+    .nav-list li:nth-child(1) a {
+        transition: 0.5s 0.2s;
+    }
+
+    .nav-list li:nth-child(2) a {
+        transition: 0.5s 0.4s;
+    }
+
+    .nav-list li:nth-child(3) a {
+        transition: 0.5s 0.6s;
+    }
+    
+    .nav.active .nav-list {
+        clip-path: circle(1500px at 90% -30%);
+        pointer-events: all;
+    }
+
+    .nav.active .nav-list a {
+        opacity: 1;
+    }
+
+    .nav.active .hamburguer {
+        position: fixed;
+        top: 26px;
+        right: 16px;
+        border-top-color: transparent;
+    }
+
+    .nav.active .hamburguer::before {
+        transform: rotate(135deg);
+    }
+
+    .nav.active .hamburguer::after {
+        transform: rotate(-135deg);
+        top: -7px;
+    }
+}
+
+@media (max-width: 435px) {
+    .box {
+        height: 100vh;
+        width: 100vw;
+    }
+}

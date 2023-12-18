@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href={{url_for('static', filename='css/jogo.css')}}>
+    <title>Jogo do harry</title>
+</head>
+<body>
+    <div class="game-board">
+        <img src='../static/img/3cloud.gif' class="clouds">
+        <img src="../static/img/harry.gif" class="harry">
+        <img src="../static/img/dragao.gif" class="pipe">
+    </div>
+    <script src={{url_for('static', filename='js/jogo.js')}} defer></script>
+</body>
+</html>
